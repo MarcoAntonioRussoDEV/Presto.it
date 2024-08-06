@@ -17,7 +17,7 @@
                 <li><hr class="dropdown-divider"></li>
                 <li>
                     <form method="POST" action="{{ route("logout") }}">@csrf
-                        <button class="dropdown-item text-danger" type="submit" onclick="event.preventDefault();">
+                        <button class="dropdown-item text-danger" type="submit">
                             Log Out
                         </button>
                     </form>
