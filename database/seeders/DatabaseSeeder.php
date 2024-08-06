@@ -2,12 +2,26 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
+    public $categories = [
+
+        'elettronica',
+        'abbigliamneto',
+        'salute e bellezza',
+        'casa e giardinaggio',
+        'giocattoli',
+        'sport',
+        'animali domestici',
+        'libri e riviste',
+        'accessori',
+        'motori',
+    ];
     /**
      * Seed the application's database.
      */
@@ -15,9 +29,12 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        foreach ($this-> categories as $category){
+
+            User::factory()->create([
+                'name' => $category
+            ]);
+        }
+        
     }
 }
