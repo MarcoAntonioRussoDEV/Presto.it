@@ -6,7 +6,7 @@
         @auth
         <div class="dropdown d-flex">
             <div id="navbar-img-container"> 
-                <img id="profile-img" src="@if($user->image)@else{{ Storage::url("public/img/placeholders/placeholder-user.jpg") }}@endif" alt="">
+                <img id="profile-img" src="{{ Storage::url("public/img/placeholders/placeholder-user.jpg") }}" alt="">
             </div>
             <button class="dropdown-toggle dropdown-toggle-split border-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Toggle Dropdown</span>
@@ -17,7 +17,7 @@
                 <li><hr class="dropdown-divider"></li>
                 <li>
                     <form method="POST" action="{{ route("logout") }}">@csrf
-                        <button class="dropdown-item text-danger" type="submit">
+                        <button class="dropdown-item text-danger" type="submit" onclick="event.preventDefault();">
                             Log Out
                         </button>
                     </form>
