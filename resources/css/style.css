@@ -1,10 +1,12 @@
 :root{
     --navbar-h: 56px;
+    --custom-primary: blueviolet;
 }
 
 #profile-img{
     width: 2rem;
     height: 2rem;
+    border-radius: 50%;
 }
 
 .custom-h-56-px{
@@ -13,4 +15,49 @@
 
 .custom-margin-body{
     margin-top: var(--navbar-h);
+}
+
+.custom-min-vh{
+    min-height: calc(100vh - var(--navbar-h));
+}
+
+.custom-circle{
+    width: 3rem;
+    height: 3rem;
+}
+
+.animate-vanish{
+    animation: theme-animation-vanish 200ms linear forwards;
+}
+.animate-appear{
+    animation: theme-animation-appear 200ms linear forwards;
+}
+
+.custom-border-bottom{
+    border-bottom: 1px solid var(--custom-primary);
+}
+
+.btn-custom-primary {
+    background-color: var(--custom-primary) !important;
+    border-color: var(--custom-primary) !important;
+    outline-color: var(--custom-primary) !important;
+    color: white !important;
+}
+
+@keyframes theme-animation-vanish {
+    100%{
+        rotate: 180deg;
+        opacity: 0;
+    }
+    
+}
+@keyframes theme-animation-appear {
+    0%{
+        opacity: 100;
+    }
+    100%{
+        rotate: 360deg;
+        opacity: 100;
+    }
+    
 }

@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container">
         <div class="row justify-content-center mb-5">
-            <img class="col-6  col-md-3" src="{{ Storage::url("public/img/placeholders/placeholder-user.jpg") }}" alt="">
+            <img class="col-6 col-md-3 mt-5" src="{{ Storage::url("public/img/placeholders/placeholder-user.jpg") }}" alt="">
         </div>
         <form method="POST" action="{{ route("login") }}" class="row justify-content-center flex-md-column align-items-md-center">
         @csrf
@@ -13,7 +13,7 @@
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
                 <label for="floatingPassword">Password</label>
             </div>
-            <button type="submit"  class="btn btn-primary p-3 col-8 col-md-3 mb-1">Accedi</button>
+            <button type="submit"  class="btn btn-custom-primary p-3 col-8 col-md-3 mb-1">Accedi</button>
             <a href="{{ route("register") }}" class="col-8 text-center small">Non sei ancora registrato?</a>
         </form>
     </div>

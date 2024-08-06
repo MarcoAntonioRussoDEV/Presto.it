@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top custom-h-56-px">
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top custom-h-56-px bg-light-subtle custom-border-bottom">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('homepage') }}">Presto.it</a>
         
@@ -13,12 +13,12 @@
             </button>
             
             <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">Azione</a></li>
+                <li><a class="dropdown-item" href="{{route("create.article")}}">Crea articolo</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
                     <form method="POST" action="{{ route("logout") }}">@csrf
                         <button class="dropdown-item text-danger" type="submit">
-                            Log Out
+                            Log out
                         </button>
                     </form>
                 </li>
