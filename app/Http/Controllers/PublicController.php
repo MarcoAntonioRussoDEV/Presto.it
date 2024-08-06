@@ -8,6 +8,6 @@ class PublicController extends Controller
 {
     public function homepage()
     {
-        return viev('welcome');
+        return view('welcome');
     }
 }

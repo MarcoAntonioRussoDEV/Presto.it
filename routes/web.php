@@ -9,4 +9,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('/', [PubblicController::class, 'homepage'])->name('homepage');
+Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
