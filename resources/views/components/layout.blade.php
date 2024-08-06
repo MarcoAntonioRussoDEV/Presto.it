@@ -6,12 +6,14 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Presto.it</title>
 </head>
-<body>
+<body class="custom-margin-body">
     <x-navbar />
-      <div class="min-vh-100">
-         {{$slot}} 
-      </div>
-      <x-footer />
+
+    <div class="min-vh-100">
+        {{$slot}} 
+    </div>
+
+    <x-footer />
 </body>
 
 </html>
