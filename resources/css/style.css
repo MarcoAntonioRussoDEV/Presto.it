@@ -1,0 +1,16 @@
+:root{
+    --navbar-h: 56px;
+}
+
+#profile-img{
+    width: 2rem;
+    height: 2rem;
+}
+
+.custom-h-56-px{
+    height: var(--navbar-h);
+}
+
+.custom-margin-body{
+    margin-top: var(--navbar-h);
+}
