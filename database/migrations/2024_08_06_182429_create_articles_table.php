@@ -18,7 +18,7 @@ return new class extends Migration
             $table->float('price',8);
 
             $table->unsignedBigInteger('category_id')->nullable();
-            $table->foreign('category_id')->references('id')->on('users');
+            $table->foreign('category_id')->references('id')->on('categories');
             
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
