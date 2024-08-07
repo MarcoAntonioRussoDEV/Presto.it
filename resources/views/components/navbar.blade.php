@@ -31,7 +31,7 @@
                 <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Categorie
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu dropdown-menu-end">
                     @foreach ($categories as $category)
                     <li><a class="dropdown-item text-capitalize" 
                             href="{{ route('byCategory', ['category'=> $category])}}">{{$category->name}}</a>
