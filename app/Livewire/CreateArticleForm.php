@@ -17,7 +17,7 @@ class CreateArticleForm extends Component
     public $price;
 
     #[Validate('required')]
-    public $category;
+    public $category = "";
     public $article;
 
 
