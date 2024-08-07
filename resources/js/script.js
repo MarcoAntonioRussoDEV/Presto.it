@@ -40,5 +40,3 @@ btnTheme.addEventListener("click", function(){
         
     }
 })
-
-

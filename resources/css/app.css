@@ -1,6 +1,7 @@
 @import './style.css';
 @import 'bootstrap';
 @import './customFloatingLabels.css';
+/* @import './carousel.css'; */
 
 :root{
     --navbar-h: 56px;
