@@ -18,5 +18,10 @@ class ArticleController extends Controller
         return view('article.byCategory', ['articles' => $category->articles, 'category' => $category]);
     }
 
+    public function show(Article $article)
+    {
+        return view('article.show', compact('article'));
+    }
+
     
 }
