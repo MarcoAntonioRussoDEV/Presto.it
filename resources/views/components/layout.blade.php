@@ -17,7 +17,7 @@
     <x-footer />
 
 
-    <button id="toggleTheme" class="btn btn-dark rounded-circle custom-circle position-fixed bottom-0 end-0 m-4"></button>
+    <button id="toggleTheme" class="btn btn-dark rounded-circle custom-circle position-fixed bottom-0 end-0 m-4 d-flex justify-content-center align-items-center"></button>
 </body>
 
 </html>

@@ -1,7 +1,4 @@
-:root{
-    --navbar-h: 56px;
-    --custom-primary: blueviolet;
-}
+
 
 #profile-img{
     width: 2rem;
@@ -22,8 +19,19 @@
 }
 
 .custom-circle{
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
+    @media screen and (min-width: 756px) {
+        width: 3rem;
+        height: 3rem;
+    };
+}
+
+.theme-svg{
+    transform: scale(3.5);
+    @media screen and (min-width: 756px) {
+        transform: scale(1.5);
+    }
 }
 
 .animate-vanish{
@@ -61,3 +69,5 @@
     }
     
 }
+
+    
