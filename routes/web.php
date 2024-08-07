@@ -11,3 +11,6 @@ Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 // Articoli
 Route::get('/create/article', [ArticleController::class, 'create'])->name('create.article')->middleware('auth');
 Route::get('/category/{category}', [ArticleController::class, 'byCategory'])->name('byCategory');
+
+Route::get('/article/index', [ArticleController::classs, 'index'])->name('article.index');
+
