@@ -25,6 +25,25 @@
             </ul>
         </div>
 
+
+        <div>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Categorie
+                </a>
+                <ul class="dropdown-menu">
+                    @foreach ($categories as $category)
+                    <li><a class="dropdown-item text-capitalize" 
+                            href="">{{$category->name}}</a>
+                    </li>
+                    @if (!$loop->last)
+                        <hr class="dropdown-divider">
+                    @endif
+                    @endforeach
+                </ul>
+            </li>
+        </div>
+
         {{-- Logica se non autenticato --}}
         @else
         <div class="dropdown d-flex">
