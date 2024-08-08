@@ -23,3 +23,9 @@ Route::get('/article/index', [ArticleController::class, 'index'])->name('article
 // Login Google
 Route::get('/login/google/redirect', [GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
 Route::get('/login/google', [GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
+
+// Theme
+Route::put('/theme/{theme}', function($request){
+    session(['theme' => $request]);
+    return back();
+})->name('theme');
