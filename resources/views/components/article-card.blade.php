@@ -1,10 +1,18 @@
-<div class="card p-0" style="width: 18rem;">
+<div class="card p-0 custom-card-size">
     <img src="{{url("asset/img/placeholders/image-placeholder.webp")}}" class=" img-fluid card-img-top" alt="...">
-    <div class="card-body">
+    <div class="card-body d-grid h-50">
         <h5 class="card-title">{{$article->title}}</h5>
-        <p class="card-text text-ellipsis" style="max-height: 10px">{{$article->description}}</p>
-        <div class="d-flex justify-content-between align-items-baseline">
-            <a href="{{ route("article.show", $article) }}" class="btn btn-primary">Dettagli</a>
+        <p class="card-text">
+            
+                @if(strlen($article->description) >=80)
+                    {{Str::substr($article->description, 0, 80)."..."}}
+                @else
+                    {{$article->description}}
+                @endif
+            
+        </p>
+        <div class="d-flex justify-self-end justify-content-between align-items-end w-100">
+            <a href="{{ route("article.show", $article) }}" class="btn btn-custom-primary">Dettagli</a>
             <p class="card-text fw-semibold fs-3">{{$article->price}} €</p>
         </div>
     </div>

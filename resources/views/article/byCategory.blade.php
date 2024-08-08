@@ -8,7 +8,7 @@
         </div>
         <div class="row">
             @forelse ($articles as $article)
-                    <div class="col">
+                    <div class="col d-flex justify-content-center">
                         <x-article-card :article="$article" />
                     </div>
             @empty
