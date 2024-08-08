@@ -25,7 +25,8 @@
                 <input type="password" class="custom-floating-input @error("password_confirmation") is-invalid @enderror" id="floatingPassword_confirmation" placeholder="" name="password_confirmation">
                 <label class="custom-floating-label" for="floatingPassword_confirmation">Conferma Password</label>
             </div>
-            <button type="submit"  class="btn btn-custom-primary p-3 col-8 col-lg-3 mb-1">Registrati</button>
+            <button type="submit"  class="btn btn-custom-primary p-3 col-8 col-lg-3 mb-2">Registrati</button>
+            <div class="col-3 px-0"><x-login-google /></div>
             <a href="{{ route("login") }}" class="col-8 col-lg-3 text-center small">Sei già registrato?</a>
         </form>
     </div>
