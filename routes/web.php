@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\GoogleLoginController;
 
 // Homepage
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
@@ -19,3 +20,6 @@ Route::get('/show/article/{article}', [ArticleController::class, 'show'])->name(
 // Article index
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 
+// Login Google
+Route::get('/login/google/redirect', [GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
+Route::get('/login/google', [GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');

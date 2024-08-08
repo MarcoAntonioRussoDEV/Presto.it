@@ -1,4 +1,4 @@
-<form class="bg-body-tertiary shadow rounded p-5 my-5" wire:submit="store">
+<form class="bg-body-tertiary shadow-primary border rounded-4 p-5 my-5" wire:submit="store">
           <div class="mb-3">
                <x-feedback />
                <label for="title" class="form-label">Titolo:</label>
