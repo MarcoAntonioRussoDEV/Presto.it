@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
@@ -19,6 +20,11 @@ Route::get('/show/article/{article}', [ArticleController::class, 'show'])->name(
 
 // Article index
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
+
+//google
+
+Route::get('/google/redirect', [App\Http\Controllers\GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
+Route::get('/google/callback', [App\Http\Controllers\GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
 
 // Login Google
 Route::get('/login/google/redirect', [GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
