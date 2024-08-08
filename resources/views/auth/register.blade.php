@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container">
         <div class="row justify-content-center mb-4">
-            <img class="col-6 col-lg-3 mt-1 rounded-circle" src="{{ Storage::url("public/img/placeholders/placeholder-user.jpg") }}" alt="">
+            <img class="col-6 col-lg-3 mt-1 rounded-circle" src="{{ url("asset/img/placeholders/placeholder-user.jpg") }}" alt="">
         </div>
         <form method="POST" action="{{ route("register") }}" class="row justify-content-center flex-lg-column align-items-lg-center">
         @csrf
