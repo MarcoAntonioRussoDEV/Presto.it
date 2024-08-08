@@ -72,7 +72,7 @@
 
 }
 
-.card-text{
+.cards-text{
     padding: .7rem;
     position: absolute;
     width: calc(var(--card-clip) - .7rem);
@@ -87,10 +87,10 @@
 } */
 
 
-.card-text p,
-.card-text h2,
-.card-text h3,
-.card-text a{
+.cards-text p,
+.cards-text h2,
+.cards-text h3,
+.cards-text a{
     opacity: 0;
     transition: calc(var(--transition-time-card) + 200ms) ease-out;
 }

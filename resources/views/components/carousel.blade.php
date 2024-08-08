@@ -2,8 +2,8 @@
     @forelse ($articles as $article)
         <div class="cards col-2 d-flex align-items-end justify-content-start">
             <img class="rounded rounded-3 cards-img" src="{{url("asset/img/placeholders/image-placeholder.webp")}}" alt="image-{{ $article->title }}">
-            <div class="card-text d-flex flex-column justify-content-start text-start gap-1">
-                <h3 class="card-title">{{ $article->title }}</h3>
+            <div class="cards-text d-flex flex-column justify-content-start text-start gap-1">
+                <h3>{{ $article->title }}</h3>
                 <a href="{{ route("byCategory", $article->category) }}" class="badge text-bg-custom-primary align-self-start text-decoration-none">{{$article->category->name}}</a>
                 <p class="card-par text-truncate">{{$article->description}}</p>
                 <h2 class="d-flex align-items-center gap-2">{{$article->price}}€ 

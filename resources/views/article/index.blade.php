@@ -4,9 +4,9 @@
             <h1 class="display-1">Tutti gli articoli</h1>
         </div>
     </div>
-    <div class="row height-custom justify-content-center align-items-center py-5">
+    <div class="row height-custom justify-content-center align-items-center">
         @forelse($articles as $article)
-            <div class="col-12 col md-3">
+            <div class="col md-3">
                 <x-article-card :article="$article" />
             </div>
         @empty
