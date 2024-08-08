@@ -7,7 +7,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Presto.it</title>
 </head>
-<body class="custom-margin-body">
+<body class="custom-margin-body min-vh-100 overflow-x-hidden">
     <x-navbar />
 
     <div class="custom-min-vh">
