@@ -1,6 +1,6 @@
 <x-layout>
      
-     <div class="container-fluid text-center bg-body-tertiary">
+     <div class="container-fluid text-center">
           <div class="row vh-100 justify-content-center align-items-center">
 
                <div class="col-12">

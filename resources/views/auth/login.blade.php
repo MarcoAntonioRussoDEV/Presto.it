@@ -14,7 +14,7 @@
                 <label class="custom-floating-label" for="floatingPassword">Password</label>
             </div>
             <button type="submit"  class="btn btn-custom-primary p-3 col-8 col-lg-3 mb-2">Accedi</button>
-            <div class="col-3 px-0"><x-login-google /></div>
+            <div class="col-8 col-lg-3 px-0"><x-login-google /></div>
             <a href="{{ route("register") }}" class="col-8 text-center small">Non sei ancora registrato?</a>
         </form>
     </div>
