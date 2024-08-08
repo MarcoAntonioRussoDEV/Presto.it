@@ -1,3 +1,3 @@
 @error($field)
-    <p class="fst-italic small text-danger text-start m-0">{{ $message }}</p>
+    <span class="fst-italic small text-danger d-block text-end mb-2">{{ $message }}</span>
 @enderror
