@@ -1,11 +1,11 @@
-<div class="card mx-auto card-w shadow text-center mb-3 w-25">
-    <img src="http://picsum.photos/200"  class="card-img-top" alt="Immagine dell'articolo {{$article->title}}">
+<div class="card p-0" style="width: 18rem;">
+    <img src="{{url("asset/img/placeholders/image-placeholder.webp")}}" class=" img-fluid card-img-top" alt="...">
     <div class="card-body">
-        <h4 class="card-title">{{$article->title}}</h4>
-        <h6 class="card-subtitle text-body-secondary">{{$article->price}}</h6>
-        <div class="d-flex justify-content-evenly align-items-center mt-5">
-            <a href="{{route('article.show', compact('article')) }}" class="btn btn-primary">Dettaglio</a>
-            <a href=""  class="btn btn-outline-info">Categoria</a>
+        <h5 class="card-title">{{$article->title}}</h5>
+        <p class="card-text text-ellipsis" style="max-height: 10px">{{$article->description}}</p>
+        <div class="d-flex justify-content-between align-items-baseline">
+            <a href="{{ route("article.show", $article) }}" class="btn btn-primary">Dettagli</a>
+            <p class="card-text fw-semibold fs-3">{{$article->price}} €</p>
         </div>
     </div>
 </div>

@@ -6,11 +6,11 @@
                     {{ $category->name }}</span></h1>
             </div>
         </div>
-        <div class="row height-custom justify-content-center align-items-center py-5">
+        <div class="row">
             @forelse ($articles as $article)
-                <div class="col-12 col-md-3">
-                    <x-article-card :article="$article" />
-                </div>
+                    <div class="col">
+                        <x-article-card :article="$article" />
+                    </div>
             @empty
                 <div class="col-12 text-center">
                     <h3>

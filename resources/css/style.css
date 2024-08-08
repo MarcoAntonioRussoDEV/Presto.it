@@ -38,6 +38,7 @@
     @media screen and (min-width: 756px) {
         transform: scale(1.5);
     }
+    
 }
 
 .animate-vanish{
@@ -56,6 +57,20 @@
     border-color: var(--custom-primary) !important;
     outline-color: var(--custom-primary) !important;
     color: white !important;
+}
+
+
+.hover-bg-danger:hover{
+    background-color: var(--bs-red) !important;
+}
+
+
+.hover-text-light:hover{
+    color: var(--bs-light) !important;
+}
+
+.justify-self-end{
+    justify-self: end !important;
 }
 
 @keyframes theme-animation-vanish {
@@ -77,6 +92,7 @@
 }
 
     
+
 
 
 
