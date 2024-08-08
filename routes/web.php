@@ -5,6 +5,7 @@ use Laravel\Socialite\Facades\Socialite;
 
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\GoogleLoginController;
 
 // Homepage
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
@@ -25,3 +26,6 @@ Route::get('/article/index', [ArticleController::class, 'index'])->name('article
 Route::get('/google/redirect', [App\Http\Controllers\GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
 Route::get('/google/callback', [App\Http\Controllers\GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
 
+// Login Google
+Route::get('/login/google/redirect', [GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
+Route::get('/login/google', [GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');

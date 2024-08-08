@@ -2,7 +2,7 @@
     --card-img-width: 20rem;
     --transition-time-card: 400ms;
     --card-clip: 50%;
-    --card-xl-clip: 88%;
+    /* --card-xl-clip: 88%; */
 
 }
 
@@ -75,7 +75,7 @@
 .cards-text{
     padding: .7rem;
     position: absolute;
-    width: calc(var(--card-clip) - .7rem);
+    width: calc(calc(var(--card-clip)*.66) - .7rem);
 }
 
 /* .cards h3{
