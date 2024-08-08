@@ -1,4 +1,4 @@
-<div class="card mx-auto card-w shadow text-center mb-3">
+<div class="card mx-auto card-w shadow text-center mb-3 w-25">
     <img src="http://picsum.photos/200"  class="card-img-top" alt="Immagine dell'articolo {{$article->title}}">
     <div class="card-body">
         <h4 class="card-title">{{$article->title}}</h4>

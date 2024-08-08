@@ -1,4 +1,10 @@
+.text-custom-primary{
+    color: var(--custom-primary);
+}
 
+.text-bg-custom-primary{
+    background-color: var(--custom-primary);
+}
 
 #profile-img{
     width: 2rem;
@@ -71,3 +77,8 @@
 }
 
     
+
+
+
+
+
