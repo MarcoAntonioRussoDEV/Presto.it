@@ -11,8 +11,9 @@ class PublicController extends Controller
 {
     public function homepage()
     {
-        $articles = Article::take(6)->orderBy('created_at','desc')->get();
-        return view('welcome', compact('articles'));
+        $articles6 = Article::take(6)->orderBy('created_at','desc')->get();
+        $articles3 = Article::take(3)->orderBy('created_at','desc')->get();
+        return view('welcome', compact('articles6','articles3'));
     }
 
     public function themeHandler($request){
