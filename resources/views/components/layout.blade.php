@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="{{session('theme', "light")}}">
+<html lang="en" data-bs-theme="{{ session('theme') }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,8 @@
 </head>
 <body class="custom-margin-body min-vh-100 overflow-x-hidden">
     <x-navbar />
-
+    @php
+    @endphp
     <div class="custom-min-vh">
         {{$slot}} 
     </div>
