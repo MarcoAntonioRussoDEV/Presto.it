@@ -6,10 +6,11 @@
                <div class="col-12">
                     <h1 class="display-4 mb-5">Presto.it</h1>
                </div>
-               @if($articles->count() != 0)
-                    <div class="col-12 col-lg-8">
+               @if($articles6->count() != 0)
+                    <div class="col-12 col-xl-8">
                          <h2 class="display-6">Articoli recenti:</h2>
-                         <x-carousel :$articles />
+                         <div id="articles-6" class="d-none d-xl-block"><x-carousel :articles="$articles6" /></div>
+                         <div id="articles-3" class="d-xl-none"><x-carousel :articles="$articles3" /></div>
                     </div>
                @endif
                @auth
