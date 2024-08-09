@@ -77,6 +77,8 @@
     padding: .7rem;
     position: absolute;
     width:calc(var(--card-clip) * 0.2);
+    overflow-x: hidden;
+    
 }
 
 .cards:hover .cards-text{
@@ -97,11 +99,11 @@
 .cards-text p,
 .cards-text h2,
 .cards-text h3,
-.cards-text a{
+.cards-text a,
+.cards-text svg{
     opacity: 0;
     transition: calc(var(--transition-time-card) + 200ms) ease-out;
 }
-
 
 /* .cards:hover h3{
     position: relative;
@@ -114,7 +116,8 @@
 .cards:hover p,
 .cards:hover h2,
 .cards:hover h3,
-.cards:hover a{
+.cards:hover a,
+.cards-text svg{
     opacity: 1;
     
     transition: var(--transition-time-card) var(--transition-time-card)  ease-in;
@@ -128,6 +131,9 @@
     transition: var(--transition-time-card) ease-out;
 
 }
+
+
+
 
 /* TODO */
 
