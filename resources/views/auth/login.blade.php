@@ -7,12 +7,12 @@
         @csrf
             <div class="mb-3 col-8 col-lg-3 p-0">
                 <x-validation field="email" />
-                <input type="email" class="custom-floating-input" id="floatingInput" placeholder="" name="email">
+                <input type="email" class="custom-floating-input @error("email") is-invalid @enderror" id="floatingInput" placeholder="" name="email" value="{{ old('email') }}">
                 <label class="custom-floating-label" for="floatingInput">Email</label>
             </div>
             <div class="mb-3 col-8 col-lg-3 p-0">
                 <x-validation field="password" />
-                <input type="password" class="custom-floating-input" id="floatingPassword" placeholder="" name="password">
+                <input type="password" class="custom-floating-input @error("password") is-invalid @enderror" id="floatingPassword" placeholder="" name="password" value="{{ old('password') }}">
                 <label class="custom-floating-label" for="floatingPassword">Password</label>
             </div>
             <button type="submit"  class="btn btn-custom-primary p-3 col-8 col-lg-3 mb-2">Accedi</button>
