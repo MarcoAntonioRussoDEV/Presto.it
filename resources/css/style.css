@@ -41,8 +41,8 @@
     
 }
 
-.animate-vanish{
-    animation: theme-animation-vanish 200ms linear forwards;
+button:focus .animate-vanish{
+    animation: theme-animation-vanish 400ms linear infinite forwards;
 }
 .animate-appear{
     animation: theme-animation-appear 200ms linear forwards;
@@ -101,8 +101,7 @@
 
 @keyframes theme-animation-vanish {
     100%{
-        rotate: 180deg;
-        opacity: 0;
+        rotate: 360deg;
     }
     
 }
