@@ -1,4 +1,4 @@
-<footer class="text-center bg-secondary-subtle">
+<footer class="text-center bg-secondary-subtle mt-5">
   <div class="container-fluid">
     
   <!-- Copyright -->
