@@ -1,9 +1,10 @@
 :root{
     --card-img-width: 20rem;
     --transition-time-card: 400ms;
+    --transition-time-card-short: 200ms;
     --card-clip: 70%;
-    /* --card-xl-clip: 88%; */
-    
+    --custom-text-light: #DEE2E6;
+
     @media screen and (min-width: 1200px){
         --card-clip: 50%;
     }
@@ -27,7 +28,7 @@
     opacity: .8;
     transition: calc(var(--transition-time-card) + 200ms) ease-out;
     
-    border: 1px solid var(--custom-primary);
+    /* border: 1px solid var(--custom-primary); */
     
 }
 
@@ -80,8 +81,15 @@
 .cards-text{
     padding: .7rem;
     position: absolute;
-    width: calc(var(--card-clip) * 0.2);
+    width: calc(var(--card-clip) * 0.4);
     transition: calc(var(--transition-time-card) + 200ms) ease-out;
+    
+    
+    @media screen and (min-width: 1200px) {
+        width: calc(var(--card-clip) * 0.2);
+    }
+
+    
 }
 
 .cards:hover .cards-text{
@@ -93,34 +101,40 @@
     }
 }
 
-/* .cards h3{
+.cards h3{
     position: relative;
-    top: 5rem;
-    
+    top: calc(var(--card-img-width) / 3);
     transition: var(--transition-time-card) var(--transition-time-card)  ease-in;
-    
-} */
+    text-shadow: 1px 1px 4px black;
+
+}
+
+.custom-text-light{
+    color: var(--custom-text-light) ;
+}
+
+.cards:hover h3{
+    position: relative;
+    top: 0rem;
+    transition: var(--transition-time-card) ease-out;
+    color: var(--bs-text-dark-emphasis) ;
+    text-shadow: none;
+}
 
 
 .cards-text p,
 .cards-text h2,
-.cards-text h3,
+/* .cards-text h3, */
 .cards-text a{
     opacity: 0;
     transition: calc(var(--transition-time-card) + 200ms) ease-out;
 }
 
-/* .cards:hover h3{
-    position: relative;
-    top: 0rem;
 
-    
-    transition: var(--transition-time-card) ease-out;
-} */
 
 .cards:hover p,
 .cards:hover h2,
-.cards:hover h3,
+/* .cards:hover h3, */
 .cards:hover a{
     opacity: 1;
     transition: var(--transition-time-card) var(--transition-time-card)  ease-in;
@@ -134,26 +148,3 @@
     transition: var(--transition-time-card) ease-out;
 
 }
-
-@keyframes fade-out {
-    100%{
-        overflow-x: hidden;
-    }
-}
-
-
-/* TODO */
-
-/* .cards-hover{
-    width: var(--card-clip);
-    transition: calc(var(--transition-time-card) + 200ms) ease-out;
-
-}
-.cards-img-hover{
-    opacity: .4;
-    width: 100%;
-
-    transition: calc(var(--transition-time-card) + 200ms) ease-out;
-    
-} */
-
