@@ -1,10 +1,10 @@
 <x-layout>
      
      <div class="container-fluid text-center">
-          <div class="row vh-100 justify-content-center align-items-center">
+          <div class="row custom-min-vh justify-content-center align-items-center">
 
                <div class="col-12">
-                    <h1 class="display-4 mb-5">Presto.it</h1>
+                    <h1 class="display-4">Presto.it</h1>
                </div>
                @if($articles6->count() != 0)
                     <div class="col-12 col-xl-8">

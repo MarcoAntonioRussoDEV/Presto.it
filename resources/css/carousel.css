@@ -1,5 +1,5 @@
 :root{
-    --card-img-width: 20rem;
+    --card-img-height: 20rem;
     --transition-time-card: 400ms;
     --transition-time-card-short: 200ms;
     --card-clip: 70%;
@@ -17,7 +17,7 @@
 
 .cards-img{
     
-    height: var(--card-img-width);
+    height: var(--card-img-height);
     padding: 0;
     width: 100%;
     
@@ -69,7 +69,7 @@
 .cards:not(:hover):has( ~ .cards:hover),
 .cards:hover ~ .cards:not(:hover){
     width: calc(var(--card-clip) * 0.2);
-    height:var(--card-img-width);
+    height:var(--card-img-height);
 
     overflow: hidden;
     text-overflow: clip;
@@ -103,7 +103,7 @@
 
 .cards h3{
     position: relative;
-    top: calc(var(--card-img-width) / 3);
+    top: calc(var(--card-img-height) / 3);
     transition: var(--transition-time-card) var(--transition-time-card)  ease-in;
     text-shadow: 1px 1px 4px black;
 
