@@ -6,10 +6,12 @@
         <form method="POST" action="{{ route("login") }}" class="row justify-content-center flex-lg-column align-items-lg-center">
         @csrf
             <div class="mb-3 col-8 col-lg-3 p-0">
+                <x-validation field="email" />
                 <input type="email" class="custom-floating-input" id="floatingInput" placeholder="" name="email">
                 <label class="custom-floating-label" for="floatingInput">Email</label>
             </div>
             <div class="mb-3 col-8 col-lg-3 p-0">
+                <x-validation field="password" />
                 <input type="password" class="custom-floating-input" id="floatingPassword" placeholder="" name="password">
                 <label class="custom-floating-label" for="floatingPassword">Password</label>
             </div>
