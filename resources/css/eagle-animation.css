@@ -1,0 +1,13 @@
+
+#eagle-eyes{
+    transform-origin: center;
+    transition: translate 200ms;
+}
+
+
+.eagle-wings{
+    transform-origin: top left;
+    rotate: 90deg;
+    transition: rotate 200ms,
+                translate 200ms;
+}

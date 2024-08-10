@@ -1,9 +1,17 @@
+.pb-4_5{
+    padding-bottom: 2rem !important;
+}
+
 .text-custom-primary{
     color: var(--custom-primary);
 }
 
 .text-bg-custom-primary{
     background-color: var(--custom-primary);
+}
+
+.border-primary-custom{
+    border-color: var(--custom-primary-opaque) !important;
 }
 
 #profile-img{
@@ -115,11 +123,3 @@ button:focus .animate-vanish{
     }
     
 }
-
-    
-
-
-
-
-
-

@@ -22,6 +22,7 @@
 
 }
 
+
 .custom-floating-input:focus + .custom-floating-label,
 .custom-floating-input:not(:placeholder-shown) + .custom-floating-label{
     position: relative;
@@ -33,6 +34,8 @@
 
     transition: inset 50ms linear;
 }
+
+
 
 .custom-floating-input:focus{
     outline: none;
@@ -47,4 +50,11 @@
 .custom-floating-input[type="number"]::-webkit-outer-spin-button,
 .custom-floating-input[type="number"]::-webkit-inner-spin-button{
 display: none;
+}
+
+.visibility{
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    bottom: 50%;
 }
