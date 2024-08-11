@@ -20,7 +20,6 @@ let wing_status = "HIDDEN"; // VISIBLE; HIDDEN
 const MAX_TRANSLATE_VALUE_EYES = 3.75;
 const ANIMATION_TIME = 200;
 
-
 // Functions
 
 function numericValue(value){
