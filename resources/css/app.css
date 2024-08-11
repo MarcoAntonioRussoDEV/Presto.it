@@ -4,13 +4,7 @@
 @import './carousel.css';
 @import './loginGoogle.css';
 @import './eagle-animation.css';
-
-
-$custom-colors: (
-    "pippo" : blueviolet
-);
-
-$theme-colors: map-merge($theme-colors, $custom-colors)
+@import './custom-variables.scss';
 
 :root{
     --navbar-h: 56px;

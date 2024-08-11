@@ -4,7 +4,7 @@
           <div class="row custom-min-vh justify-content-center align-items-center">
 
                <div class="col-12">
-                    <h1 class="display-4 text-primary">Presto.it</h1>
+                    <h1 class="display-4">Presto.it</h1>
                </div>
                @if($articles6->count() != 0)
                     <div class="col-12 col-xl-8">
