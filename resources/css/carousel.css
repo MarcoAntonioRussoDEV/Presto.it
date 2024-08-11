@@ -105,7 +105,12 @@
     position: relative;
     top: calc(var(--card-img-height) / 3);
     transition: var(--transition-time-card) var(--transition-time-card)  ease-in;
-    text-shadow: 1px 1px 4px black;
+    text-transform: capitalize;
+
+    color: white;
+    font-weight: 900;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #2a2a2ac4;
 
 }
 
@@ -118,7 +123,8 @@
     top: 0rem;
     transition: var(--transition-time-card) ease-out;
     color: var(--bs-text-dark-emphasis) ;
-    text-shadow: none;
+
+    -webkit-text-stroke-width: 0;
 }
 
 
