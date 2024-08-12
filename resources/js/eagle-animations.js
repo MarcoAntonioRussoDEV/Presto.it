@@ -29,13 +29,17 @@ function numericValue(value){
 function showPassword(){
     visibility_toggle.src = "./asset/icons/visibility-off.svg"
     password_field.type = "text";
-    password_confirmation_field.type = "text";
+    if(password_confirmation_field){
+        password_confirmation_field.type = "text";
+    }
 }
 
 function hidePassword(){
     visibility_toggle.src = "./asset/icons/visibility-on.svg"
     password_field.type = "password"
-    password_confirmation_field.type = "password"
+    if(password_confirmation_field){
+        password_confirmation_field.type = "password"
+    }
 }
 
 function togglePasswordVisibility(){
@@ -148,32 +152,36 @@ if(window.location.pathname == "/login" || window.location.pathname == "/registe
 
 
     // Email
-
+    
     name_fields.forEach(field => {
 
-        field.addEventListener("focus", (e)=>{
-            setEyesPos(e)
-        })
-    
-        field.addEventListener("blur", ()=>{
-            eyes.style.translate = ""
-        })
-    
-        field.addEventListener("input", (e)=>{
-            setEyesPos(e)
-        });        
+        if(field){
+            field.addEventListener("focus", (e)=>{
+                setEyesPos(e)
+            })
+        
+            field.addEventListener("blur", ()=>{
+                eyes.style.translate = ""
+            })
+        
+            field.addEventListener("input", (e)=>{
+                setEyesPos(e)
+            });        
+        }
     });
 
     //  Password
 
-    password_fields.forEach(pass_field => {
-        
-            pass_field.addEventListener("focus", ()=>{
+    password_fields.forEach(field => {
+        if(field){
+
+            field.addEventListener("focus", ()=>{
                 if(wing_status == "HIDDEN"){
                     setWingsPos();
                 }
                 
             })
+        }
     });
 
 
