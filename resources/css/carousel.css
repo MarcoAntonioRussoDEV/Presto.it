@@ -1,10 +1,15 @@
 :root{
-    --card-img-width: 20rem;
+    --card-img-height: 20rem;
     --transition-time-card: 400ms;
-    --card-clip: 50%;
-    /* --card-xl-clip: 88%; */
+    --transition-time-card-short: 200ms;
+    --card-clip: 70%;
+    --custom-text-light: #DEE2E6;
 
+    @media screen and (min-width: 1200px){
+        --card-clip: 50%;
+    }
 }
+    
 
 .svg-color{
     fill: var(--custom-primary);
@@ -12,7 +17,7 @@
 
 .cards-img{
     
-    height: var(--card-img-width);
+    height: var(--card-img-height);
     padding: 0;
     width: 100%;
     
@@ -23,13 +28,13 @@
     opacity: .8;
     transition: calc(var(--transition-time-card) + 200ms) ease-out;
     
-    border: 1px solid var(--custom-primary);
+    /* border: 1px solid var(--custom-primary); */
     
 }
 
 #card-section{
     max-width: 100vw;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .cards{
@@ -44,6 +49,7 @@
     transition: calc(var(--transition-time-card) + 200ms) ease-out;
 
 }
+
 
 .cards:hover .cards-img{
     opacity: .4;
@@ -63,7 +69,7 @@
 .cards:not(:hover):has( ~ .cards:hover),
 .cards:hover ~ .cards:not(:hover){
     width: calc(var(--card-clip) * 0.2);
-    height:var(--card-img-width);
+    height:var(--card-img-height);
 
     overflow: hidden;
     text-overflow: clip;
@@ -75,41 +81,62 @@
 .cards-text{
     padding: .7rem;
     position: absolute;
-    width: calc(calc(var(--card-clip)*.66) - .7rem);
+    width: calc(var(--card-clip) * 0.4);
+    transition: calc(var(--transition-time-card) + 200ms) ease-out;
+    
+    
+    @media screen and (min-width: 1200px) {
+        width: calc(var(--card-clip) * 0.2);
+    }
+
+    
 }
 
-/* .cards h3{
+.cards:hover .cards-text{
+    padding: .7rem;
+    position: absolute;
+    width: calc(calc(var(--card-clip) * .97) - .7rem);
+    @media screen and (min-width: 1200px) {
+        width: calc(calc(var(--card-clip) * .66) - .7rem);
+    }
+}
+
+.cards h3{
     position: relative;
-    top: 5rem;
-    
+    top: calc(var(--card-img-height) / 3);
     transition: var(--transition-time-card) var(--transition-time-card)  ease-in;
-    
-} */
+    text-shadow: 1px 1px 4px black;
+
+}
+
+.custom-text-light{
+    color: var(--custom-text-light) ;
+}
+
+.cards:hover h3{
+    position: relative;
+    top: 0rem;
+    transition: var(--transition-time-card) ease-out;
+    color: var(--bs-text-dark-emphasis) ;
+    text-shadow: none;
+}
 
 
 .cards-text p,
 .cards-text h2,
-.cards-text h3,
+/* .cards-text h3, */
 .cards-text a{
     opacity: 0;
     transition: calc(var(--transition-time-card) + 200ms) ease-out;
 }
 
 
-/* .cards:hover h3{
-    position: relative;
-    top: 0rem;
-
-    
-    transition: var(--transition-time-card) ease-out;
-} */
 
 .cards:hover p,
 .cards:hover h2,
-.cards:hover h3,
+/* .cards:hover h3, */
 .cards:hover a{
     opacity: 1;
-    
     transition: var(--transition-time-card) var(--transition-time-card)  ease-in;
     
 }

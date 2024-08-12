@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('homepage') }}">Presto.it</a>
 
-       <div class="d-flex gap-4">
+        <div class="d-flex gap-4">
             {{-- Lista dropdown --}}
             <div class="navbar-nav">
                 <li class="nav-item dropdown">
@@ -71,7 +71,7 @@
             @endauth
             {{-- Fine logica se non autenticato e user dropdown --}}
     
-       </div>
+        </div>
     </div>
 
 

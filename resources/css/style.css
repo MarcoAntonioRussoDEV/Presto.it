@@ -1,9 +1,17 @@
+.pb-4_5{
+    padding-bottom: 2rem !important;
+}
+
 .text-custom-primary{
     color: var(--custom-primary);
 }
 
 .text-bg-custom-primary{
     background-color: var(--custom-primary);
+}
+
+.border-primary-custom{
+    border-color: var(--custom-primary-opaque) !important;
 }
 
 #profile-img{
@@ -41,8 +49,8 @@
     
 }
 
-.animate-vanish{
-    animation: theme-animation-vanish 200ms linear forwards;
+button:focus .animate-vanish{
+    animation: theme-animation-vanish 400ms linear infinite forwards;
 }
 .animate-appear{
     animation: theme-animation-appear 200ms linear forwards;
@@ -101,8 +109,7 @@
 
 @keyframes theme-animation-vanish {
     100%{
-        rotate: 180deg;
-        opacity: 0;
+        rotate: 360deg;
     }
     
 }
@@ -116,11 +123,3 @@
     }
     
 }
-
-    
-
-
-
-
-
-

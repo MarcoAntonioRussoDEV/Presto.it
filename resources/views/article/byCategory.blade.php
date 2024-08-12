@@ -6,7 +6,7 @@
                     {{ $category->name }}</span></h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row gy-4">
             @forelse ($articles as $article)
                     <div class="col d-flex justify-content-center">
                         <x-article-card :article="$article" />
