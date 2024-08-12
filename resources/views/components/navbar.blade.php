@@ -71,7 +71,7 @@
             @endauth
             {{-- Fine logica se non autenticato e user dropdown --}}
     
-       </div>
+        </div>
     </div>
 
 

@@ -13,7 +13,7 @@
     <x-navbar />
     @php
     @endphp
-    <div class="custom-min-vh">
+    <div class="custom-min-vh pt-3">
         {{$slot}} 
     </div>
 

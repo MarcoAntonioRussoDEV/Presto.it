@@ -1,16 +1,18 @@
-@import './style.css';
 @import 'bootstrap';
+@import './style.css';
 @import './customFloatingLabels.css';
 @import './carousel.css';
 @import './loginGoogle.css';
+@import './eagle-animation.css';
+@import './custom-variables.scss';
 
 :root{
     --navbar-h: 56px;
-    --custom-primary: rgb(138, 43, 226);
+    --custom-primary: #8a2be2;
     --custom-primary-opaque: rgba(138, 43, 226, 0.4);
     --custom-primary-dark: rgb(89, 18, 156);
     --custom-primary-blur: #71408963;
     --bs-danger-color: #dc3545;
     --bs-focus-ring: none;
-
 }
+
