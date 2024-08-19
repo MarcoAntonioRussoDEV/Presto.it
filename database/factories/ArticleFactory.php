@@ -26,7 +26,7 @@ class ArticleFactory extends Factory
                 'user_id' => fake()->numberBetween(1, count(User::all())),
                 'created_at' => now(),
                 'updated_at' => now(),
-                
+                'is_accepted' => fake()->randomElement([0,1,null]),
         ];
     }
 }

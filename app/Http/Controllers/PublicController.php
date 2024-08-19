@@ -11,8 +11,8 @@ class PublicController extends Controller
 {
     public function homepage()
     {
-        $articles6 = Article::take(6)->orderBy('created_at','desc')->get();
-        $articles3 = Article::take(3)->orderBy('created_at','desc')->get();
+        $articles6 = Article::where('is_accepted', true)->take(6)->orderBy('created_at','desc')->get();
+        $articles3 = Article::where('is_accepted', true)->take(3)->orderBy('created_at','desc')->get();
         return view('welcome', compact('articles6','articles3'));
     }
 
