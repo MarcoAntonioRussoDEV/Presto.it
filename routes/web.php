@@ -10,6 +10,9 @@ use App\Http\Controllers\RevisorController;
 
 // Homepage
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
+// Ricerca articoli
+Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
+
 
 // Articoli
 Route::get('/create/article', [ArticleController::class, 'create'])->name('create.article')->middleware('auth');
