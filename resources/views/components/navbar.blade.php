@@ -65,7 +65,10 @@
                             <hr class="dropdown-divider p-0 m-0">
                         </li>
                         @if(Auth::user()->is_revisor)
-                        <li><a class="dropdown-item" href="{{ route('revisor.index') }}">Zona revisore</a></li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <a class="dropdown-item" href="{{ route('revisor.index') }}">Zona revisore</a>
+                            <span class="badge rounded-md bg-danger me-2">{{ \App\Models\Article::toBeRevisedCount() }}</span>
+                        </li>
                         <li>
                             <hr class="dropdown-divider p-0 m-0">
                         </li>

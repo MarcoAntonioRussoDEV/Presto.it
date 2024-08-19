@@ -36,4 +36,8 @@ class Article extends Model
             'category'=>$this->category
         ];
     }
+
+    public static function toBeRevisedCount(){
+        return Article::where('is_accepted', null)->count();
+    }
 }
