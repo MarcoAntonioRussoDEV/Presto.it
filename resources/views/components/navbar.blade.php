@@ -2,6 +2,17 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('homepage') }}">Presto.it</a>
 
+        {{-- Aggiunta Scout(barra ricerca) --}}
+        <form class="d-flex ms-auto" role="search" action="" method="GET">
+            <div class="input-group">
+                <input type="search" name="query" class="form-control" placeholders="Search" aria-label="search">
+                <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">
+                    Search
+                </button>
+            </div>
+        </form>
+
+
         <div class="d-flex gap-4">
             {{-- Lista dropdown --}}
             <div class="navbar-nav">
@@ -53,6 +64,12 @@
                         <li>
                             <hr class="dropdown-divider p-0 m-0">
                         </li>
+                        @if(Auth::user()->is_revisor)
+                        <li><a class="dropdown-item" href="{{ route('revisor.index') }}">Zona revisore</a></li>
+                        <li>
+                            <hr class="dropdown-divider p-0 m-0">
+                        </li>
+                        @endif
                         <li>
                             <form method="POST" action="{{ route('logout') }}">@csrf
                                 <button class="dropdown-item hover-bg-danger hover-text-light py-1 rounded-bottom-2" type="submit">
