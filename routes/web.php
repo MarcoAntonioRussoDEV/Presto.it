@@ -10,6 +10,9 @@ use App\Http\Controllers\RevisorController;
 
 // Homepage
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
+// Ricerca articoli
+Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
+
 
 // Articoli
 Route::get('/create/article', [ArticleController::class, 'create'])->name('create.article')->middleware('auth');
@@ -36,8 +39,3 @@ Route::put('/theme/{theme}', function($request){
     session(['theme' => $request]);
     return back();
 })->name('theme');
-
-//Revisor
-Route::get('revisor/index', [RevisorController::class,'index'])->name('revisor.index');
-Route::patch('/accept/{article}',[RevisorController::class,'accept'])->name('accept');
-Route::patch('/reject/{article}',[RevisorController::class,'reject'])->name('reject');
