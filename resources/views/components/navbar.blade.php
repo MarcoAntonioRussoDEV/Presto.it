@@ -2,6 +2,17 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('homepage') }}">Presto.it</a>
 
+        {{-- Aggiunta Scout(barra ricerca) --}}
+        <form class="d-flex ms-auto" role="search" action="" method="GET">
+            <div class="input-group">
+                <input type="search" name="query" class="form-control" placeholders="Search" aria-label="search">
+                <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">
+                    Search
+                </button>
+            </div>
+        </form>
+
+
         <div class="d-flex gap-4">
             {{-- Lista dropdown --}}
             <div class="navbar-nav">
