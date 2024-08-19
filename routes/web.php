@@ -6,6 +6,7 @@ use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\GoogleLoginController;
+use App\Http\Controllers\RevisorController;
 
 // Homepage
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
@@ -35,3 +36,8 @@ Route::put('/theme/{theme}', function($request){
     session(['theme' => $request]);
     return back();
 })->name('theme');
+
+//Revisor
+Route::get('revisor/index', [RevisorController::class,'index'])->name('revisor.index');
+Route::patch('/accept/{article}',[RevisorController::class,'accept'])->name('accept');
+Route::patch('/reject/{article}',[RevisorController::class,'reject'])->name('reject');

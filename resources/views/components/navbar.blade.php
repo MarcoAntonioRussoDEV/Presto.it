@@ -53,6 +53,12 @@
                         <li>
                             <hr class="dropdown-divider p-0 m-0">
                         </li>
+                        @if(Auth::user()->is_revisor)
+                        <li><a class="dropdown-item" href="{{ route('revisor.index') }}">Zona revisore</a></li>
+                        <li>
+                            <hr class="dropdown-divider p-0 m-0">
+                        </li>
+                        @endif
                         <li>
                             <form method="POST" action="{{ route('logout') }}">@csrf
                                 <button class="dropdown-item hover-bg-danger hover-text-light py-1 rounded-bottom-2" type="submit">
