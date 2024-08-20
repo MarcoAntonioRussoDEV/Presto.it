@@ -7,6 +7,7 @@
     <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     <title>Presto.it</title>
 </head>
 <body class="custom-margin-body min-vh-100 overflow-x-hidden">

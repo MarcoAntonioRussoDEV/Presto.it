@@ -22,15 +22,26 @@ class RevisorController extends Controller
       $article->setAccepted(true);
       return redirect()
          ->back()
-         ->with('info', "Hai accettato l'articolo $article->title");
+         ->with('info', "Hai accettato l'articolo " . '"' .  strtoupper($article->title) . '"')
+         ->with(compact('article'));
    }
    public function reject(Article $article)
    {
       $article->setAccepted(false);
       return redirect()
          ->back()
-         ->with('info', "Hai rifiutato l'articolo $article->title");
+         ->with('info', "Hai rifiutato l'articolo " . '"' .  strtoupper($article->title) . '"')
+         ->with(compact('article'));
+         
    }
+
+   public function restoreLastArticle(Article $article){
+      $article->setAccepted(null);
+      return redirect()
+         ->back();
+         // ->with('success', "Hai ripristinato l'articolo " . '"' .  strtoupper($this->last_article->title) . '"');
+   }
+   
 
    public function becomeRevisor(){
       Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
@@ -38,7 +49,9 @@ class RevisorController extends Controller
 
    }
    public function makeRevisor(User $user){
-     Artisan::call('app:make-user-revisor',['email'=>$user->email]);
-     return redirect()->back();
+      Artisan::call('app:make-user-revisor',['email'=>$user->email]);
+      return redirect()->back();
    }
+
+
 }

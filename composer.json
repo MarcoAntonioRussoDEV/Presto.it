@@ -11,6 +11,7 @@
         "laravel/scout": "^10.11",
         "laravel/socialite": "^5.15",
         "laravel/tinker": "^2.9",
+        "laravolt/avatar": "^5.1",
         "livewire/livewire": "^3.5",
         "teamtnt/laravel-scout-tntsearch-driver": "^14.0"
     },
