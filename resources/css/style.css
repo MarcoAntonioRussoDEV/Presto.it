@@ -2,6 +2,10 @@
     padding-bottom: 2rem !important;
 }
 
+.py-6{
+    padding-block: 1.5rem !important;
+}
+
 .text-custom-primary{
     color: var(--custom-primary);
 }
@@ -106,6 +110,8 @@ button:focus .animate-vanish{
 .shadow-primary{
     box-shadow: 0 0rem 1.5rem var(--custom-primary-opaque);
 }
+
+
 
 @keyframes theme-animation-vanish {
     100%{

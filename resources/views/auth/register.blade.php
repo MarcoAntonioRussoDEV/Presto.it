@@ -21,7 +21,7 @@
                 <label class="custom-floating-label" for="floatingEmail">Email</label>
             </div>
             <div class="mb-3 col-8 col-lg-3 p-0 pb-1 position-relative">
-                <input type="password" class="custom-floating-input @error("password") is-invalid @enderror" id="floatingPassword" placeholder="" name="password" value="{{ old('password') }}">
+                <input type="password" class="custom-floating-input @error("password") is-invalid @enderror" id="floatingPassword" placeholder="" name="password" value="{{ old('password') }}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Minimo 8 caratteri" data-bs-custom-class="custom-tooltip">
                 <label class="custom-floating-label" for="floatingPassword">Password</label>
                 <img class="pe-4 visibility" id="visibility" src="{{ url("asset/icons/visibility-on.svg") }}" alt="">
                 <x-validation field="password" />
@@ -31,7 +31,7 @@
                 <label class="custom-floating-label" for="floatingPassword_confirmation">Conferma Password</label>
                 <x-validation field="password_confirmation" />
             </div>
-            <button type="submit"  class="btn btn-custom-primary p-3 col-8 col-lg-3 mb-2">Registrati</button>
+            <button type="submit"  class="btn btn-custom-primary p-3 col-8 col-lg-3 mb-2" >Registrati</button>
             <div class="col-8 col-lg-3 px-0"><x-login-google /></div>
             <a href="{{ route("login") }}" class="col-8 col-lg-3 text-center small">Sei già registrato?</a>
         </form>
