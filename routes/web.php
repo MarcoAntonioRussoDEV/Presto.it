@@ -7,6 +7,7 @@ use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\GoogleLoginController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\UserController;
 
 // Homepage
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
@@ -44,6 +45,11 @@ Route::put('/theme/{theme}', function($request){
 Route::get('revisor/index', [RevisorController::class,'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accept/{article}',[RevisorController::class,'accept'])->name('accept');
 Route::patch('/reject/{article}',[RevisorController::class,'reject'])->name('reject');
+Route::patch('/restore/{article}', [RevisorController::class, 'restoreLastArticle'])->name('restore');
 Route::get('revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+
 //action nella mail
 Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
+
+// User
+Route::get('/user/dashboard', [UserController::class, 'dashboard'])->middleware('auth')->name('user.dashboard');
