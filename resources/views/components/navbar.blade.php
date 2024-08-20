@@ -13,7 +13,7 @@
         </form>
 
 
-        <div class="d-flex gap-4">
+        <div class="d-flex gap-1 align-items-center">
             {{-- Lista dropdown --}}
             <div class="navbar-nav">
                 <li class="nav-item dropdown">
@@ -42,12 +42,11 @@
             {{-- Fine lista dropdown --}}
     
             {{-- User dropdown --}}
-            <div class="dropdown d-flex">
-                <div id="navbar-img-container">
-                    <img id="profile-img" src="{{ url('asset/img/placeholders/placeholder-user.jpg') }}" alt="">
-                </div>
-                <button class="dropdown-toggle dropdown-toggle-split border-0 bg-transparent" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+            <div class="dropdown">
+                <button class="dropdown-toggle dropdown-toggle-split border-0 bg-transparent d-flex align-items-center gap-1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div id="navbar-img-container">
+                        <img id="profile-img" src="@auth{{ Avatar::create(auth()->user()->name)->toBase64() }} @else {{ url('asset/img/placeholders/placeholder-user.jpg') }} @endauth" alt="">
+                    </div>
                     <span class="visually-hidden">Toggle Dropdown</span>
                 </button>
     
@@ -73,6 +72,12 @@
                             <hr class="dropdown-divider p-0 m-0">
                         </li>
                         @endif
+                        <li>
+                            <a class="dropdown-item" href="{{ route('user.dashboard') }}">Dashboard utente</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider p-0 m-0">
+                        </li>
                         <li>
                             <form method="POST" action="{{ route('logout') }}">@csrf
                                 <button class="dropdown-item hover-bg-danger hover-text-light py-1 rounded-bottom-2" type="submit">

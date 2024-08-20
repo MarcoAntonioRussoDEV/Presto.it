@@ -1,5 +1,11 @@
 <x-layout>
-    <x-feedback />
+    <div class="row justify-content-center">
+        <div class="col-4">
+            @if (session()->has('article'))
+                <x-feedback :article="session('article')" />
+            @endif
+        </div>
+    </div>
     <div class="container-fluid pt-5">
         <div class="row">
             <div class="col-3">
