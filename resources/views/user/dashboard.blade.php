@@ -1,14 +1,17 @@
 <x-layout>
+
+{{--
 <main class="vh-100">
     <div class="container d-flex justify-content-center position-relative">
         <img src="{{ $user->img ?? Avatar::create(auth()->user()->name)->toBase64() }}" alt="">
         <input class=" opacity-50 position-absolute top-50" type="file">
     </div>
 </main>
+--}}
 
-    {{-- <form id="profileImgForm" action="{{route('user.update',auth()->user()->id)}}" method="POST" enctype="multipart/form-data" class="flex flex-col justify-center items-center p-5 gap-10">
+    <form id="profileImgForm" action="{{route('user.updateProfileImage',auth()->user())}}" method="POST" enctype="multipart/form-data" class="flex flex-col justify-center items-center p-5 gap-10">
         @csrf
-        @method('PUT') --}}
+        @method('PUT')
 
 
 
@@ -25,7 +28,11 @@
             <p class="text-5xl" >Benvenuto</p>
             <p class="text-7xl text-red-700">{{auth()->user()->name}} </p>
         </section>
+
+        <button>
+            salva
+        </button>
         
 
-    {{-- </form> --}}
+    </form>
 </x-layout>
