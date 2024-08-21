@@ -38,8 +38,8 @@ class RevisorController extends Controller
    public function restoreLastArticle(Article $article){
       $article->setAccepted(null);
       return redirect()
-         ->back();
-         // ->with('success', "Hai ripristinato l'articolo " . '"' .  strtoupper($this->last_article->title) . '"');
+         ->back()
+         ->with('success', "Hai ripristinato l'articolo " . '"' .  strtoupper($article->title) . '"');
    }
    
 
