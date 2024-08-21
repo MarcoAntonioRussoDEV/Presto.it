@@ -3,6 +3,8 @@
         <div class="col-4">
             @if (session()->has('article'))
                 <x-feedback :article="session('article')" />
+            @else
+                <x-feedback />
             @endif
         </div>
     </div>

@@ -39,7 +39,7 @@ class RevisorController extends Controller
       $article->setAccepted(null);
       return redirect()
          ->back();
-         ->with('info', "Hai ripristinato l'articolo " . '"' .  strtoupper($article->title) . '"');
+         // ->with('success', "Hai ripristinato l'articolo " . '"' .  strtoupper($this->last_article->title) . '"');
    }
    
 
