@@ -50,3 +50,8 @@ Route::get('revisor/request', [RevisorController::class, 'becomeRevisor'])->midd
 
 //action nella mail
 Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->name('make_revisor');
+
+// User
+Route::get('/user/dashboard', [UserController::class, 'dashboard'])->middleware('auth')->name('user.dashboard');
+
+Route::put('/user/{user}', [UserController::class, 'updateProfileImage'])->name('user.updateProfileImage')->middleware('auth');
