@@ -9,6 +9,7 @@ use App\Http\Controllers\GoogleLoginController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\UserController;
 
+
 // Homepage
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 // Ricerca articoli
@@ -50,3 +51,7 @@ Route::get('revisor/request', [RevisorController::class, 'becomeRevisor'])->midd
 
 //action nella mail
 Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->name('make_revisor');
+
+// User
+Route::get('/user/dashboard', [UserController::class, 'dashboard'])->middleware('auth')->name('user.dashboard');
+
