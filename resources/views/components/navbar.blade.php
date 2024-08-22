@@ -4,11 +4,12 @@
 
         {{-- Aggiunta Scout(barra ricerca) --}}
         <form class="d-flex ms-auto" role="search" action="{{ route('article.search') }}" method="GET">
-            <div class="input-group">
-                <input type="search" name="query" class="form-control" placeholders="Search" aria-label="search">
-                <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">
+            <div class="position-relative">
+                <input type="search" name="query" class="form-control rounded-pill" placeholders="Search" aria-label="search">
+                <i class="material-symbols-outlined position-absolute top-50 end-0 translate-middle text-secondary">Search</i>
+                {{-- <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">
                     Search
-                </button>
+                </button> --}}
             </div>
         </form>
 
