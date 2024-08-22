@@ -13,8 +13,7 @@
 </head>
 <body class="custom-margin-body min-vh-100 overflow-x-hidden">
     <x-navbar />
-    @php
-    @endphp
+    
     <div class="custom-min-vh pt-3">
         {{$slot}} 
     </div>

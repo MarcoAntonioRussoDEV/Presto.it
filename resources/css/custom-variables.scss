@@ -1,17 +1,7 @@
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';
 
-// $primary: blueviolet !default;
-$theme-colors:(
-    'primary': blueviolet
-);
+$primary: blueviolet !default;
 
-$bs-dropdown-link-active-bg:        blueviolet;
-
-// $custom-colors: (
-//     "n" : rgb(226, 177, 43)
-// );
-    
-//     $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import 'bootstrap';

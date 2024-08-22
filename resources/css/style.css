@@ -111,7 +111,9 @@ button:focus .animate-vanish{
     box-shadow: 0 0rem 1.5rem var(--custom-primary-opaque);
 }
 
-
+.custom-footer-img-h{
+    height: 14rem;;
+}
 
 @keyframes theme-animation-vanish {
     100%{

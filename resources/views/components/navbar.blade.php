@@ -1,22 +1,17 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top custom-h-56-px bg-light-subtle custom-border-bottom">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{{ route('homepage') }}">Presto.it</a>
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top custom-h-56-px bg-light-subtle custom-border-bottom vw-100">
+    <div class="container-fluid row">
 
-        {{-- Aggiunta Scout(barra ricerca) --}}
-        <form class="d-flex ms-auto" role="search" action="{{ route('article.search') }}" method="GET">
-            <div class="position-relative">
-                <input type="search" name="query" class="form-control rounded-pill" placeholders="Search" aria-label="search">
-                <i class="material-symbols-outlined position-absolute top-50 end-0 translate-middle text-secondary">Search</i>
-                {{-- <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">
-                    Search
-                </button> --}}
-            </div>
-        </form>
+        {{-- LOGO --}}
+        <a class="navbar-brand col-4 me-0" href="{{ route('homepage') }}">Presto.it</a>
 
+        {{-- Ricerca --}}
+        <x-search-article-component />
 
-        <div class="d-flex gap-1 align-items-center">
-            {{-- Lista dropdown --}}
-            <div class="navbar-nav">
+        {{-- Categorie e Utente --}}
+        <div class="d-flex gap-1 align-items-center col-4 justify-content-end">
+
+            {{-- Lista categorie dropdown --}}
+            <div class="navbar-nav d-none d-lg-block">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
