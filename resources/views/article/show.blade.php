@@ -41,4 +41,9 @@
             </div>
         </div>
     </div>
+    @auth
+        <livewire:review-form />
+    @endauth
+    <livewire:review-list />
+
 </x-layout>
