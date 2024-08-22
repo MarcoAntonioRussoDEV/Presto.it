@@ -49,4 +49,10 @@ Route::patch('/restore/{article}', [RevisorController::class, 'restoreLastArticl
 Route::get('revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
 //action nella mail
-Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->name('make_revisor');
+Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
+
+
+// User
+Route::get('/user/dashboard', [UserController::class, 'dashboard'])->middleware('auth')->name('user.dashboard');
+
+Route::put('/user/{user}', [UserController::class, 'updateProfileImage'])->name('user.updateProfileImage')->middleware('auth');
