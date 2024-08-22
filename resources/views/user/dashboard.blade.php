@@ -15,16 +15,19 @@
 
             <div class="row justify-content-center align-items-center">
                 <div class="col-12 d-flex justify-content-center">
-                    <section id="clickAreaProfileImage" onclick="profileImgInput.click()" class="position-relative d-flex align-items-center justify-content-center w-48 h-48 rounded-circle border border-danger border-4 p-1 overflow-hidden">
-                        <img class="img-fluid rounded-circle" src="{{ $user->img ?? Avatar::create(auth()->user()->name)->toBase64() }}" alt="">
-                        <img id="profileImg" class="img-fluid rounded-circle" style="max-width: 600px; max-height: 600px;" src="{{ Storage::url(auth()->user()->img) }}" alt="">
+                    <section id="clickAreaProfileImage" onclick="profileImgInput.click()" class="position-relative d-flex align-items-center justify-content-center">
+                        <img class="img-fluid visually-hidden" src="{{ $user->img ?? Avatar::create(auth()->user()->name)->toBase64() }}" alt="">
+                        <img id="profileImg" class="img-fluid" style="max-width: 600px; max-height: 600px;" src="{{ Storage::url(auth()->user()->img) }}" alt="">
                         
-                        <label id="profileImgLabel" class="d-flex flex-column align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 text-white fw-bold bg-dark bg-opacity-50 rounded-circle text-center transition-opacity">
-                            <span class="fs-5">Cambia immagine</span>
+                        <label id="profileImgLabel" class="d-flex flex-column align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100">
+                            <span class="fs-5"></span>
                             <input onchange="profileImgForm.submit()" draggable="true" type="file" name="img" id="profileImgInput" class="visually-hidden">
                         </label>
                     </section>
                 </div>
+
+                <p class="text-center mt-4">Premi sull'immagine per cambiarla</p>
+
 
             </div>
 
