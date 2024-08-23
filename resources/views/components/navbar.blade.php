@@ -85,7 +85,7 @@
                         <li class="d-flex justify-content-between align-items-center">
                             <a class="dropdown-item d-flex justify-content-between gap-2" href="{{ route('revisor.index') }}">
                                 <span class="material-symbols-outlined fw-light">checklist</span>Zona revisore
-                                <span class="badge rounded-circle bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span>
+                                <span class="badge bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span>
                             </a>
                         </li>
                         <li>

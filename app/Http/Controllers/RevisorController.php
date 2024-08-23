@@ -14,7 +14,10 @@ class RevisorController extends Controller
 {
    public function index()
    {
-      $article_to_check = Article::where('is_accepted', null)->first();
+      $article_to_check = Article::where([
+         ['is_accepted', "=", null],
+         ['user_id', "!=", Auth::user()->id]
+         ])->first();
       return view('revisor.index', compact('article_to_check'));
    }
    public function accept(Article $article)
@@ -44,8 +47,16 @@ class RevisorController extends Controller
    
 
    public function becomeRevisor(){
-      Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
-      return redirect()->route('homepage')->with('success', "Complimenti, hai richiesto di diventare revisore");
+      $user = Auth::user();
+
+      if(!$user->reviewer_requested){
+
+         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
+         $user->reviewer_requested = true;
+         $user->save();
+         return redirect()->route('homepage')->with('success', "Complimenti, hai richiesto di diventare revisore");
+      }
+         return redirect()->route('homepage')->with('error', "Attenzione, hai già richiesto di diventare revisore");
 
    }
    public function makeRevisor(User $user){

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Scout\Searchable;
 
 class Article extends Model
@@ -44,6 +45,9 @@ class Article extends Model
     }
 
     public static function toBeRevisedCount(){
-        return Article::where('is_accepted', null)->count();
+        return Article::where([
+            ['is_accepted', null],
+            ['user_id', "!=", Auth::user()->id]
+            ])->count();
     }
 }
