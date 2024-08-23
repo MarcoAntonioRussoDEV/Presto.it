@@ -53,8 +53,8 @@
             <div class="row justify-content-center align-items-center height-custom text-center">
                 <div class="col-12">
                     <h1 class="fst-italic display-4">
+                        Nessun articolo da revisionare
                     </h1>
-                    Nessun articolo da revisionare
                     <a href="{{ route('homepage') }}" class="mt-5 btn btn-success"> Torna all'homepage</a>
                 </div>
             </div>

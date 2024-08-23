@@ -4,7 +4,7 @@
         <div class="row justify-content-start">
 
             <section class="col-2 col-md d-flex justify-content-end">
-                <img class="profile-img border border-primary" src="{{ $review->user->img ? Storage::url($review->user->img) : Avatar::create($review->user->name) }}" alt="">
+                <img class="profile-img border border-primary" src="{{ $review->user->img ? Storage::url($review->user->img) : Avatar::create($review->user->name)->setDimension(400,400)->setFontSize(180) }}" alt="">
             </section>
     
             <section id="review-section" class="col-9 col-md-11 border border-2 border-primary rounded rounded-xl pt-2 pb-0 mb-3 break-words" >

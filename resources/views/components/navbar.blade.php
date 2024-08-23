@@ -41,9 +41,10 @@
             <div class="dropdown">
                 <button class="dropdown-toggle dropdown-toggle-split border-0 bg-transparent d-flex align-items-center gap-1" data-bs-toggle="dropdown" aria-expanded="false">
                     <div id="navbar-img-container" class="border border-primary rounded rounded-circle position-relative">
-                        <img class="profile-img" src="@auth{{ auth()->user()->img ? Storage::url(auth()->user()->img) :Avatar::create(auth()->user()->name)->toBase64() }} @else {{ url('asset/img/placeholders/placeholder-user.jpg') }} @endauth" alt="profile-img">
-                        @if(auth()->user() && auth()->user()->is_revisor)
-                            <span class="position-absolute top-100 start-50 translate-middle badge text-body pt-2">Revisor</span>
+                        <img class="profile-img" src="@auth{{ auth()->user()->img ? Storage::url(auth()->user()->img) :Avatar::create(auth()->user()->name)->setDimension(400,400)->setFontSize(180) }} @else {{ url('asset/img/placeholders/placeholder-user.jpg') }} @endauth" alt="profile-img">
+                        @if(auth()->user() && auth()->user()->is_revisor && \App\Models\Article::toBeRevisedCount() !== 0)
+                        <span class="badge position-absolute bg-danger translate-middle top-0">{{\App\Models\Article::toBeRevisedCount()}}</span>
+                            {{-- <span class="position-absolute top-100 start-50 translate-middle badge pt-2 text-body">Revisor</span> --}}
                         @endif
                     </div>
                     <span class="visually-hidden">Toggle Dropdown</span>
@@ -83,9 +84,14 @@
 
                         @if(Auth::user()->is_revisor)
                         <li class="d-flex justify-content-between align-items-center">
-                            <a class="dropdown-item d-flex justify-content-between gap-2" href="{{ route('revisor.index') }}">
-                                <span class="material-symbols-outlined fw-light">checklist</span>Zona revisore
-                                <span class="badge bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center gap-2" href="{{ route('revisor.index') }}">
+                                <i class="material-symbols-outlined fw-light">checklist</i>
+                                <p class="m-0">Zona revisore</p>
+                                @if (\App\Models\Article::toBeRevisedCount() !== 0)
+                                    <span class="badge bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span>
+                                @else
+                                    <span class="badge bg-success">{{\App\Models\Article::toBeRevisedCount()}}</span>
+                                @endif
                             </a>
                         </li>
                         <li>
