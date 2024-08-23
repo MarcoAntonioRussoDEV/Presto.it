@@ -1,6 +1,7 @@
 <form wire:submit="submit({{$article->id}})" class="px-5 row gap-1 col-12 col-md-4 mb-5">
         <h3 class="fs-2 texts">Scrivi una recensione</h3>
-        
+        <x-feedback />
+
         <label for="title">Titolo</label>
         <input class="form-control" type="text" wire:model.live="title">
         <x-validation field="title" />

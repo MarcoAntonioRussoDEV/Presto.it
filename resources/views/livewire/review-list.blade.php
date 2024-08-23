@@ -1,4 +1,4 @@
-<article class="mb-5 col-12 col-md-8">
+<article class="mb-5 col-12 col-md-6 mx-auto @auth col-md-8 mx-0 px-5 @endauth">
     @forelse($reviews as $review)
 
         <div class="row justify-content-start">
@@ -19,7 +19,13 @@
             </section>
 
         </div>
+        
     @empty
         <p class="text-center mt-2">Non ci sono recensioni per questo articolo</p>
     @endforelse
+    <div class="d-flex justify-content-center">
+        <div>
+            {{ $reviews->links() }}
+        </div>
+    </div>
 </article>

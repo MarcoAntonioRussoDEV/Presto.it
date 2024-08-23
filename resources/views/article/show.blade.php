@@ -1,6 +1,5 @@
 <x-layout>
     <div class="container">
-    
         <div class="row height-custom justify-content-center py-5">
             <div class="col-12 col-md-6 mb-3">
                 <div id="carouselExample" class="carousel slide ">
@@ -40,7 +39,9 @@
     </div>
     <div class="d-flex align-items-start">
             @auth
-                <livewire:review-form :$article />
+                @if($article->user->id !== auth()->user()->id)
+                    <livewire:review-form :$article />
+                @endif
             @endauth
                 <livewire:review-list :$article />
     </div>
