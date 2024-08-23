@@ -28,21 +28,12 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-3 height-custom text-center">
-<<<<<<< HEAD
-                <h2 class="display-5"> <span class="fw-bold">Titolo: </span> {{ $article->title }}</h2>
-                <div class="d-flex flex-column justify-content-center h-75">
-                    <h4 class="fw-bold">Prezzo: {{ $article->price }} </h4>
-                    <h5>Descrizione:</h5>
-                    <p>{{ $article->description }}</p>
-                    
-=======
                 <h2 class="display-5 fw-bold mb-0">{{ $article->title }}</h2>
                 <h5 class="mb-5 badge text-primary">#{{ $article->category->name }}</h5>
                 <div class="d-flex flex-column justify-content-start gap-4">
                     <p class="text-md-start">{{ $article->description }}</p>
                     <h4 class="fw-bold text-end">{{ $article->price }}€</h4>
                     <button class="btn btn-success w-75 mx-auto">Acquista</button>
->>>>>>> d5f24f2934e7ecaf19dcaf4072c5aa19ba01e56a
                 </div>
             </div>
         </div>
