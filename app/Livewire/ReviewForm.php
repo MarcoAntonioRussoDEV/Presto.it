@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Review;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Validate;
 use Livewire\Attributes\On;
 
@@ -45,15 +46,19 @@ class ReviewForm extends Component
     public function submit($article_id){
 
         $this->validate();
-        
-        Review::create([
-            'title' => $this->title,
-            'content' => $this->content,
-            'grade' => $this->grade,
-            'user_id' => auth()->user()->id,
-            'article_id' => $article_id,
-        ]);
+        if(Auth::user()->id !== $this->article->user->id){
 
+            Review::create([
+                'title' => $this->title,
+                'content' => $this->content,
+                'grade' => $this->grade,
+                'user_id' => Auth::user()->id,
+                'article_id' => $article_id,
+            ]);
+            
+        } else {
+            session()->flash('error', "Non puoi recensire un tuo articolo");
+        }
         self::resetForm();
         $this->dispatch("refreshList");
     }
