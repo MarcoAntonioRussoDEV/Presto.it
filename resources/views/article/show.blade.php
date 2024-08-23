@@ -37,6 +37,7 @@
                     <h4 class="fw-bold">Prezzo: {{ $article->price }} </h4>
                     <h5>Descrizione:</h5>
                     <p>{{ $article->description }}</p>
+                    
                 </div>
             </div>
         </div>
