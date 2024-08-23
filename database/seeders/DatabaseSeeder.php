@@ -28,12 +28,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        foreach ($this-> categories as $category){
+        if(Category::all()->count() == 0){
 
-            Category::create([
-                'name' => $category
-            ]);
+            foreach ($this-> categories as $category){
+                
+                Category::create([
+                    'name' => $category
+                ]);
+            }
         }
+
         User::factory(1)->create();
         Article::factory(20)->create();
 

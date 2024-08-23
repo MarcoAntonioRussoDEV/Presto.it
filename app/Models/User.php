@@ -24,6 +24,7 @@ class User extends Authenticatable
         'theme'
     ];
 
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -39,7 +40,8 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
-    protected function casts(): array
+
+     protected function casts(): array
     {
         return [
             'email_verified_at' => 'datetime',
