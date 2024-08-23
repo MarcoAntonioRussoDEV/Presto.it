@@ -11,7 +11,7 @@
         <form method="POST" action="{{ route("register") }}" class="row justify-content-center flex-column align-items-center">
         @csrf
             <div class=" col-8 col-lg-3 p-0 pb-1 position-relative ">
-                <x-validation field="name" />
+                <x-validation field="name" authForm="true" />
                 <input type="text" class="custom-floating-input @error("name") is-invalid @enderror" id="floatingName" placeholder="" name="name" value="{{ old('name') }}">
                 <label class="custom-floating-label" for="floatingName">Nome</label>
             </div>
