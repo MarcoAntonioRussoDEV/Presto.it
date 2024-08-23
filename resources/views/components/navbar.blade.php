@@ -25,8 +25,8 @@
                             <hr class="dropdown-divider">
                         </li>
                         @foreach ($categories as $category)
-                            <li><a class="dropdown-item text-capitalize"
-                                    href="{{ route('byCategory', ['category' => $category]) }}">{{ $category->name }}</a>
+                            <li>
+                                <a class="dropdown-item text-capitalize" href="{{ route('byCategory', ['category' => $category]) }}">{{ $category->name }}</a>
                             </li>
                             @if (!$loop->last)
                                 <hr class="dropdown-divider">
@@ -40,8 +40,11 @@
             {{-- User dropdown --}}
             <div class="dropdown">
                 <button class="dropdown-toggle dropdown-toggle-split border-0 bg-transparent d-flex align-items-center gap-1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <div id="navbar-img-container">
-                        <img id="profile-img" src="@auth{{ Avatar::create(auth()->user()->name)->toBase64() }} @else {{ url('asset/img/placeholders/placeholder-user.jpg') }} @endauth" alt="">
+                    <div id="navbar-img-container" class="border border-primary rounded rounded-circle position-relative">
+                        <img class="profile-img" src="@auth{{ auth()->user()->img ? Storage::url(auth()->user()->img) :Avatar::create(auth()->user()->name)->toBase64() }} @else {{ url('asset/img/placeholders/placeholder-user.jpg') }} @endauth" alt="profile-img">
+                        @if(auth()->user() && auth()->user()->is_revisor)
+                            <span class="position-absolute top-100 start-50 translate-middle badge text-body pt-2">Revisor</span>
+                        @endif
                     </div>
                     <span class="visually-hidden">Toggle Dropdown</span>
                 </button>
@@ -54,33 +57,51 @@
                         <li>
                             <hr class="dropdown-divider p-0 m-0">
                         </li>
-                        <li><a class="dropdown-item" href="{{ route('create.article') }}">Crea articolo</a></li>
-                        <li><a class="dropdown-item" href="{{ route('article.index') }}">Tutti gli articoli</a></li>
+                        
+                        <li>
+                            <a class="dropdown-item d-flex gap-2" href="{{ route('user.dashboard') }}">
+                                <span class="material-symbols-outlined fw-light">dashboard</span>Dashboard utente
+                            </a>
+                        </li>
                         <li>
                             <hr class="dropdown-divider p-0 m-0">
                         </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex gap-2" href="{{ route('create.article') }}">
+                                <span class="material-symbols-outlined fw-light">add_circle</span>Crea articolo
+                            </a>
+                            </li>
+                        <li>
+                            <a class="dropdown-item d-flex gap-2" href="{{ route('article.index') }}">
+                                <span class="material-symbols-outlined fw-light">list_alt</span>Tutti gli articoli
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider p-0 m-0">
+                        </li>
+
                         @if(Auth::user()->is_revisor)
                         <li class="d-flex justify-content-between align-items-center">
-                            <a class="dropdown-item" href="{{ route('revisor.index') }}">Zona revisore</a>
-                            <span class="badge rounded-md bg-danger me-2">{{ \App\Models\Article::toBeRevisedCount() }}</span>
+                            <a class="dropdown-item d-flex justify-content-between gap-2" href="{{ route('revisor.index') }}">
+                                <span class="material-symbols-outlined fw-light">checklist</span>Zona revisore
+                                <span class="badge rounded-circle bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span>
+                            </a>
                         </li>
                         <li>
                             <hr class="dropdown-divider p-0 m-0">
                         </li>
                         @endif
-                        <li>
-                            <a class="dropdown-item" href="{{ route('user.dashboard') }}">Dashboard utente</a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider p-0 m-0">
-                        </li>
+                        
+
                         <li>
                             <form method="POST" action="{{ route('logout') }}">@csrf
-                                <button class="dropdown-item hover-bg-danger hover-text-light py-1 rounded-bottom-2" type="submit">
-                                    Log out
+                                <button class="dropdown-item hover-bg-danger hover-text-light py-1 rounded-bottom-2 d-flex gap-2" type="submit">
+                                    <span class="material-symbols-outlined fw-light">logout</span>Log out
                                 </button>
                             </form>
                         </li>
+
                     </ul>
                 </div>
                 {{-- Logica se non autenticato --}}

@@ -1,12 +1,24 @@
-<form wire:submit="submit">
-    <label for="title">Titolo</label>
-    <input type="text" wire:model="title">
+<form wire:submit="submit({{$article->id}})" class="px-5 row gap-1 col-12 col-md-4 mb-5">
+        <h3 class="fs-2 texts">Scrivi una recensione</h3>
+        
+        <label for="title">Titolo</label>
+        <input class="form-control" type="text" wire:model.live="title">
+        <x-validation field="title" />
 
-    <label for="content">Testo</label>
-    <input type="text" wire:model="content">
+        <label for="content">Testo</label>
+        <textarea class="form-control" type="text" wire:model="content"></textarea>
+        <x-validation field="content" />
 
-    <label for="vote">Voto</label>
-    <input type="number" wire:model="vote" min="1" max="5">
+
+        <label for="vote" class="position-relative d-flex justify-content-center align-items-center">
+            <input class="form-control w-25 opacity-0" type="range" wire:model.live="grade" min="1" max="5">
+            <div class="position-absolute pointer-events-none" style="pointer-events: none">
+                <x-grade-component grade="{{$grade}}" />
+            </div>
+        </label>
+        <x-validation field="grade" />
+
+        
+    <button class="btn btn-warning w-100 mt-5">Invia</button>
     
-    <button>Salva</button>
 </form>

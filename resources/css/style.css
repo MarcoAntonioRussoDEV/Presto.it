@@ -18,7 +18,7 @@
     border-color: var(--custom-primary-opaque) !important;
 }
 
-#profile-img{
+.profile-img{
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
@@ -113,6 +113,29 @@ button:focus .animate-vanish{
 
 .custom-footer-img-h{
     height: 14rem;;
+}
+
+.square-dashboard-img{
+    aspect-ratio: 1/1;
+    width: var(--square-img);
+    height: var(--square-img);
+}
+
+#clickAreaProfileImage:hover img{
+    opacity: 0.3;
+}
+
+#clickAreaProfileImage:hover{
+    opacity: unset !important;
+    border: .3rem dashed whitesmoke !important;
+    
+}
+#clickAreaProfileImage:hover label{
+    opacity: unset !important;
+}
+
+#review-section{
+    word-wrap: break-word;
 }
 
 @keyframes theme-animation-vanish {
