@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Scout\Searchable;
+use App\Models\Image;
+
+
 
 class Article extends Model
 {
@@ -50,4 +53,11 @@ class Article extends Model
             ['user_id', "!=", Auth::user()->id]
             ])->count();
     }
+
+    public function images(): HasMany
+    {
+        return $this->hasMany(Image::class); 
+    }
 }
+
+

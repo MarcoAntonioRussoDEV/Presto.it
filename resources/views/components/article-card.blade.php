@@ -1,5 +1,7 @@
 <div class="card p-0 custom-card-size">
-    <img src="{{url("asset/img/placeholders/image-placeholder.webp")}}" class=" img-fluid card-img-top" alt="...">
+    <img src="{{$article->images->isNotEmpty() ? Storage::url($article->images->first()->path) : 'http://picsum.photos/200'}}" 
+    class="card-img-top" alt="immagine dell'articolo {{ $article->title}}">
+    {{--<img src="{{url("asset/img/placeholders/image-placeholder.webp")}}" class=" img-fluid card-img-top" alt="...">--}}
     <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="badge bg-primary position-absolute top-0 end-0 m-2 text-decoration-none fw-semibold">#{{ Str::ucfirst($article->category->name) }}</a>
     <div class="card-body d-grid h-50">
         <h5 class="card-title">{{$article->title}}</h5>
