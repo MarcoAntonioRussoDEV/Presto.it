@@ -28,10 +28,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        if(Category::all()->count() == 0){
+        if (Category::all()->count() == 0) {
 
-            foreach ($this-> categories as $category){
-                
+            foreach ($this->categories as $category) {
+
                 Category::create([
                     'name' => $category
                 ]);
@@ -40,7 +40,5 @@ class DatabaseSeeder extends Seeder
 
         User::factory(1)->create();
         Article::factory(20)->create();
-
-        
     }
 }
