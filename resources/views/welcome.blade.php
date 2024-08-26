@@ -8,7 +8,7 @@
                </div>
                @if($articles6->count() != 0)
                     <div class="col-12 col-xl-8">
-                         <h2 class="display-6">Articoli recenti:</h2>
+                         <h2 class="display-6">{{__('ui.lastArticles')}}:</h2>
                          <div id="articles-6" class="d-none d-xl-block"><x-carousel :articles="$articles6" /></div>
                          <div id="articles-3" class="d-xl-none"><x-carousel :articles="$articles3" /></div>
                     </div>

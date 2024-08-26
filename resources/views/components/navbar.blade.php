@@ -15,18 +15,18 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Categorie
+                        {{__("ui.categories")}}   
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li>
-                            <a class="dropdown-item" href="{{ route("article.index") }}"><strong>Tutti gli articoli</strong></a>
+                            <a class="dropdown-item" href="{{ route("article.index") }}"><strong>{{__("ui.allArticles")}}</strong></a>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
                         @foreach ($categories as $category)
                             <li>
-                                <a class="dropdown-item text-capitalize" href="{{ route('byCategory', ['category' => $category]) }}">{{ $category->name }}</a>
+                                <a class="dropdown-item text-capitalize" href="{{ route('byCategory', ['category' => $category]) }}">{{__("ui.$category->name" )}}</a>
                             </li>
                             @if (!$loop->last)
                                 <hr class="dropdown-divider">
@@ -113,12 +113,19 @@
                 {{-- Logica se non autenticato --}}
             @else
                 <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="{{ route('login') }}">Log in</a></li>
-                    <li><a class="dropdown-item" href="{{ route('register') }}">Sign Up</a></li>
+                    <li><a class="dropdown-item" href="{{ route('login') }}">{{__("ui.logIn")}}</a></li>
+                    <li><a class="dropdown-item" href="{{ route('register')}}">{{__("ui.signUp")}}</a></li>
                 </ul>
             @endauth
             {{-- Fine logica se non autenticato e user dropdown --}}
-    
+
+           {{--lingue straniere--}}
+
+           <div>
+                <x-_locale lang="it" />
+                <x-_locale lang="en" />
+                <x-_locale lang="fr" />
+           </div>
         </div>
     </div>
 

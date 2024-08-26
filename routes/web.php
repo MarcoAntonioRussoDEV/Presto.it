@@ -57,4 +57,8 @@ Route::get('/user/dashboard', [UserController::class, 'dashboard'])->middleware(
 
 Route::put('/user/{user}', [UserController::class, 'updateProfileImage'])->name('user.updateProfileImage')->middleware('auth');
 
+//Cambio lingua
+
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
+
 
