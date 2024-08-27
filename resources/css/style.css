@@ -169,6 +169,6 @@ button:focus .animate-vanish {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 120px;
+    height: 80px;
     width: 120px;
 }
