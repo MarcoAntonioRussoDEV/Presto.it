@@ -46,7 +46,14 @@ class ReviewForm extends Component
     public function submit($article_id){
 
         $this->validate();
-        if(Auth::user()->id !== $this->article->user->id){
+        if(Auth::user()->id === $this->article->user->id){
+
+            session()->flash('error', "Non puoi recensire un tuo articolo");
+
+        } else if(Auth::user()->reviews->where('article_id', $article_id)->count() > 0) {
+            session()->flash('error', "Hai già recensito questo articolo");
+
+        } else{
 
             Review::create([
                 'title' => $this->title,
@@ -55,10 +62,9 @@ class ReviewForm extends Component
                 'user_id' => Auth::user()->id,
                 'article_id' => $article_id,
             ]);
-            
-        } else {
-            session()->flash('error', "Non puoi recensire un tuo articolo");
         }
+            
+
         self::resetForm();
         $this->dispatch("refreshList");
     }
