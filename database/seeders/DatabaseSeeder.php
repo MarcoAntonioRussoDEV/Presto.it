@@ -7,6 +7,8 @@ use App\Models\Category;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -39,6 +41,14 @@ class DatabaseSeeder extends Seeder
         }
 
         User::factory(1)->create();
+        User::create([
+            'name' => 'Sig. Revisore',
+            'email' => 'revisore@gmail.com',
+            'email_verified_at' => now(),
+            'password' => 'revisore123',
+            'remember_token' => Str::random(10),
+            'is_revisor' => true
+        ]);
         Article::factory(20)->create();
     }
 }
