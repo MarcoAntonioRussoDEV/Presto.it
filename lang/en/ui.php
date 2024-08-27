@@ -16,6 +16,8 @@ return
      'logIn'=>'Log in',
      'signUp'=>'Sign up',
      'lastArticles'=>'Last articles',
-     'categories'=>'Categories'
-
+     'categories'=>'Categories',
+     'do you want to become an auditor?'=>'Do you want to become an auditor?',
+     'click and make a request to the admin!'=>'Click and make a request to the admin!',
+     'send a request'=>'Send a request!'
  ];
