@@ -7,7 +7,7 @@
     @method('PUT')
         
         <section class="text-center my-4">
-            <p class="display-5 fw-bold">Benvenuto</p>
+            <p class="display-5 fw-bold">{{__("ui.welcome")}}</p>
             <p class="display-4 fw-bold">{{ auth()->user()->name }}</p>
         </section>
 
@@ -16,7 +16,7 @@
             <input onchange="profileImgForm.submit()" draggable="true" type="file" name="img" id="profileImgInput" class="visually-hidden">
             <label class="position-absolute w-100 h-100 d-flex justify-content-center align-items-center rounded rounded-circle opacity-0" for="img"><i class="material-symbols-outlined display-2">add</i></label>
         </section>
-        <p class="text-center mt-2 small fst-italic">Premi sull'immagine per cambiarla</p>
+        <p class="text-center mt-2 small fst-italic">{{__("ui.click on the image for changing it")}}</p>
 
 </form>
 

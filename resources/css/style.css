@@ -28,6 +28,26 @@
     border-radius: 50%;
 }
 
+.custom-img-mascotte{
+    width: 50% !important;
+    height: auto !important;
+
+    @media screen and (min-width: 768px) {
+        width: 15% !important;
+    }
+}
+
+.custom-max-w{
+    max-width: 28vw;
+}
+
+#logo-img{
+    width: 12rem;
+    
+    max-height: var(--navbar-h);
+    height: auto;
+    
+}
 .custom-h-56-px {
     height: var(--navbar-h);
 }

@@ -19,5 +19,8 @@ return
         'categories' => 'Categories',
         'do you want to become a reviewer?' => 'Do you want to become a reviewer?',
         'click and make a request to the admin!' => 'Click and make a request to the admin!',
-        'send a request!' => 'Send a request!'
+        'send a request!' => 'Send a request!',
+        "createArticle" => "Create article",
+        "findWhatYouAreLookingFor" => "Find what you're looking for in a flap of a wing!",
+        "wordOfGianfalco" => "word of Gianfalco",
     ];

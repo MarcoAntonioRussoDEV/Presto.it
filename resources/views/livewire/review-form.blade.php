@@ -1,12 +1,12 @@
 <form wire:submit="submit({{$article->id}})" class="px-5 row gap-1 col-12 col-md-4 mb-5">
-        <h3 class="fs-2 texts">Scrivi una recensione</h3>
+        <h3 class="fs-2 texts">{{__("ui.write a review!")}}</h3>
         <x-feedback />
 
-        <label for="title">Titolo</label>
+        <label for="title">{{__("ui.title")}}</label>
         <input class="form-control" type="text" wire:model.live="title">
         <x-validation field="title" />
 
-        <label for="content">Testo</label>
+        <label for="content">{{__("ui.text")}}</label>
         <textarea class="form-control" type="text" wire:model="content"></textarea>
         <x-validation field="content" />
 
@@ -21,4 +21,10 @@
 
         
     <button class="btn btn-warning w-100 mt-5">Invia</button>
+
+
+    <div>
+        <h3>Media delle Recensioni: {{ $averageGrade ? number_format($averageGrade, 1) : 'Nessuna recensione' }}</h3> 
+    </div>
+    
 </form>

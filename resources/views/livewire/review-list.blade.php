@@ -21,7 +21,7 @@
         </div>
         
     @empty
-        <p class="text-center mt-2">Non ci sono recensioni per questo articolo</p>
+        <p class="text-center mt-2">{{__("ui.there are no reviews for this article.")}}</p>
     @endforelse
     <div class="d-flex justify-content-center">
         <div>
