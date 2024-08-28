@@ -19,6 +19,11 @@ return [
     'categories'=>'Categorie',
     'do you want to become a reviewer?'=>'Vuoi diventare revisore?',
     'click and make a request to the admin!'=>'Clicca e fai richiesta all\'amministratore!',
-    'send a request!'=>'Invia richiesta!'
+    'send a request!'=>'Invia richiesta!',
+    "createArticle" => "Crea articolo",
+    "findWhatYouAreLookingFor" => "Trova ciò che cerchi in un batter d'ali!",
+    "wordOfGianfalco" => "Parola di Gianfalco"
+
+
 
 ];

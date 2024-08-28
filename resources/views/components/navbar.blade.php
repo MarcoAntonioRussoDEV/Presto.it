@@ -2,7 +2,9 @@
     <div class="container-fluid row justify-content-between">
 
         {{-- LOGO --}}
-        <a class="navbar-brand col-4 me-0" href="{{ route('homepage') }}">Presto.it</a>
+        <a class="navbar-brand col-4 me-0" href="{{ route('homepage') }}">
+            <img id="logo-img" class="custom-max-w" src="{{session('theme') == 'light' ? url('/asset/img/logo-gradient.png') : url('/asset/img/logo-white.png')}}" alt="logo">
+        </a>
 
         {{-- Ricerca --}}
         <x-search-article-component />
