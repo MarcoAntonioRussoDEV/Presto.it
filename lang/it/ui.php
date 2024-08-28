@@ -16,6 +16,9 @@ return [
      'logIn'=>'Accedi',
      'signUp'=>'Registrati',
      'lastArticles'=>'Articoli recenti',
-     'categories'=>'Categorie'
+     'categories'=>'Categorie',
+     'vuoi diventare revisore?'=>'Vuoi diventare revisore?',
+     'clicca e fai richiesta all\'amministratore!'=>'Clicca e fai richiesta all\'amministratore!',
+     'invia richiesta'=>'Invia richiesta!'
 
 ];

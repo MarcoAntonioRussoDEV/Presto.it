@@ -8,11 +8,11 @@
       </div>
 
       <div class="col-lg-6 col-md-12 text-center">
-        <h5 class="text-uppercase">Vuoi diventare revisore?</h5>
+        <h5 class="text-uppercase">{{__("ui.do you want to become an auditor?")}}</h5>
         <p>
-          Clicca e fai richiesta al nostro Admin!
+          {{__("click and make a request to the admin!")}}
         </p>
-        <a href="{{ route('become.revisor') }}" class="btn btn-primary col-6">Invia richiesta!</a>
+        <a href="{{ route('become.revisor') }}" class="btn btn-primary col-6">{{__("ui.send a request!")}}</a>
       </div>
       
 
