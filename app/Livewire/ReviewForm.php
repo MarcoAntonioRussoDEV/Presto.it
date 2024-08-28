@@ -22,7 +22,9 @@ class ReviewForm extends Component
 
     public function render()
     {
-        return view('livewire.review-form');
+        return view('livewire.review-form', [
+            'averageGrade' => $this->article->averageGrade(),
+        ]);
     }
 
     public function mount($article)
