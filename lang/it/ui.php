@@ -17,8 +17,8 @@ return [
      'signUp'=>'Registrati',
      'lastArticles'=>'Articoli recenti',
      'categories'=>'Categorie',
-     'vuoi diventare revisore?'=>'Vuoi diventare revisore?',
-     'clicca e fai richiesta all\'amministratore!'=>'Clicca e fai richiesta all\'amministratore!',
-     'invia richiesta'=>'Invia richiesta!'
+     'do you want to become a reviewer?'=>'Vuoi diventare revisore?',
+     'click and make a request to the admin!'=>'Clicca e fai richiesta all\'amministratore!',
+     'send a request!'=>'Invia richiesta!'
 
 ];
