@@ -16,7 +16,7 @@ return
      'signUp'=>'S\'enregistrer',
      'lastArticles'=>'Les articles récents',
      'categories'=>'Les catégories',
-     'do you want to become a reviewer'=>'Vous souhaitez devenir un réviseur?',
+     'do you want to become a reviewer?'=>'Vous souhaitez devenir un réviseur?',
      'click and make a request to the admin!'=>'Cliquez et faites demande à l\'administrateur!',
      'send a request!'=>'Envoyez votre demande!'
 ];
