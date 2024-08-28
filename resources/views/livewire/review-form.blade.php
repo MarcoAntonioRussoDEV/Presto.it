@@ -21,10 +21,4 @@
 
         
     <button class="btn btn-warning w-100 mt-5">Invia</button>
-
-
-    <div>
-        <h3>Media delle Recensioni: {{ $averageGrade ? number_format($averageGrade, 1) : 'Nessuna recensione' }}</h3> 
-    </div>
-    
 </form>
