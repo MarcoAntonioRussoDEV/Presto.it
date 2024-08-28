@@ -17,7 +17,13 @@ return
      'signUp'=>'Sign up',
      'lastArticles'=>'Last articles',
      'categories'=>'Categories',
-     'do you want to become a reviewer?'=>'Do you want to become a reviewer?',
+     'do you want to become a revisor?'=>'Do you want to become a revisor?',
      'click and make a request to the admin!'=>'Click and make a request to the admin!',
-     'send a request!'=>'Send a request!'
+     'send a request!'=>'Send a request!',
+     'publish an article'=>'Publish an article',
+     'there are no articles for this category'=>'There are no articles for this category',
+     'articles of the category'=>'Articles of the category',
+     'there are no articles'=>'There are no articles',
+     'no articles match your search'=>'No articles match your search',
+     'search results'=>'Search results'
  ];

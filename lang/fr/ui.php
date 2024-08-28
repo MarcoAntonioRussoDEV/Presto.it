@@ -16,7 +16,13 @@ return
      'signUp'=>'S\'enregistrer',
      'lastArticles'=>'Les articles récents',
      'categories'=>'Les catégories',
-     'do you want to become a reviewer'=>'Vous souhaitez devenir un réviseur?',
+     'do you want to become a revisor?'=>'Vous souhaitez devenir un réviseur?',
      'click and make a request to the admin!'=>'Cliquez et faites demande à l\'administrateur!',
-     'send a request!'=>'Envoyez votre demande!'
+     'send a request!'=>'Envoyez votre demande!',
+     'publish an article'=>'Publiez un article',
+     'there are no articles for this category'=>'Il n\'a d\'articles pour cette catégorie',
+     'articles of the category'=>'Les articles de la catégorie',
+     'there are no articles'=>'Il n\'a d\'articles',
+     'no articles match your search'=>'Aucun article ne correspond à votre recherche',
+     'search results'=>'Résultats de recherche'
 ];
