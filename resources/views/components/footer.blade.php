@@ -8,9 +8,9 @@
       </div>
 
       <div class="col-lg-6 col-md-12 text-center">
-        <h5 class="text-uppercase">{{__("ui.do you want to become an auditor?")}}</h5>
+        <h5 class="text-uppercase">{{__("ui.do you want to become a reviewer?")}}</h5>
         <p>
-          {{__("click and make a request to the admin!")}}
+          {{__("ui.click and make a request to the admin!")}}
         </p>
         <a href="{{ route('become.revisor') }}" class="btn btn-primary col-6">{{__("ui.send a request!")}}</a>
       </div>
