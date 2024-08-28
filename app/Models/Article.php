@@ -58,6 +58,11 @@ class Article extends Model
     {
         return $this->hasMany(Image::class); 
     }
+
+    public function averageGrade()
+    {
+        return $this->reviews()->avg('grade');
+    }
 }
 
 
