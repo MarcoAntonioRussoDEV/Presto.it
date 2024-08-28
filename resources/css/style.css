@@ -6,6 +6,10 @@
     padding-block: 1.5rem !important;
 }
 
+.min-w-0{
+    min-width: 0rem !important;
+}
+
 .text-custom-primary {
     color: var(--custom-primary);
 }

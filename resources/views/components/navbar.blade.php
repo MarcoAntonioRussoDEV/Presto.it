@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top custom-h-56-px bg-light-subtle custom-border-bottom vw-100">
-    <div class="container-fluid row">
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top custom-h-56-px bg-light-subtle custom-border-bottom vw-100 d-flex justify-content-center">
+    <div class="container-fluid row justify-content-between">
 
         {{-- LOGO --}}
         <a class="navbar-brand col-4 me-0" href="{{ route('homepage') }}">Presto.it</a>
@@ -34,9 +34,12 @@
                         @endforeach
                     </ul>
                 </li>
+                
             </div>
             {{-- Fine lista dropdown --}}
-    
+            <div>
+                <x-languages-flags />
+            </div>
             {{-- User dropdown --}}
             <div class="dropdown">
                 <button class="dropdown-toggle dropdown-toggle-split border-0 bg-transparent d-flex align-items-center gap-1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -119,13 +122,9 @@
             @endauth
             {{-- Fine logica se non autenticato e user dropdown --}}
 
-           {{--lingue straniere--}}
+            {{--lingue straniere--}}
 
-           <div>
-                <x-_locale lang="it" />
-                <x-_locale lang="en" />
-                <x-_locale lang="fr" />
-           </div>
+            
         </div>
     </div>
 

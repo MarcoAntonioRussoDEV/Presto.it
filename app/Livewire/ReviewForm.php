@@ -22,9 +22,7 @@ class ReviewForm extends Component
 
     public function render()
     {
-        return view('livewire.review-form', [
-            'averageGrade' => $this->article->averageGrade(),
-        ]);
+        return view('livewire.review-form');
     }
 
     public function mount($article)
@@ -32,7 +30,8 @@ class ReviewForm extends Component
         $this->article = $article;
     }
 
-    public function rules(){
+    public function rules()
+    {
         return [
             'title' => "required",
             'content' => "required",
@@ -40,41 +39,45 @@ class ReviewForm extends Component
         ];
     }
 
-    public function messages(){
+    public function messages()
+    {
         return [
             'grade.min' => "Select at least 1 star",
         ];
     }
-    public function submit($article_id){
+    public function submit($article_id)
+    {
 
         $this->validate();
-        if(Auth::user()->id === $this->article->user->id){
+        if (Auth::user()->id === $this->article->user->id) {
 
             session()->flash('error', "Non puoi recensire un tuo articolo");
-
-        } else if(Auth::user()->reviews->where('article_id', $article_id)->count() > 0) {
+        } else if (Auth::user()->reviews->where('article_id', $article_id)->count() > 0) {
             session()->flash('error', "Hai già recensito questo articolo");
+        } else {
 
-        } else{
-
-            Review::create([
+            $review = Review::create([
                 'title' => $this->title,
                 'content' => $this->content,
                 'grade' => $this->grade,
                 'user_id' => Auth::user()->id,
                 'article_id' => $article_id,
             ]);
+
+            $review->article->update([
+                'avg_grade' => $review->article->averageGrade()
+                ]);
         }
-            
+
 
         self::resetForm();
         $this->dispatch("refreshList");
     }
 
-    public function resetForm(){
+    public function resetForm()
+    {
         $this->title = '';
         $this->content = '';
         $this->grade = null;
-
     }
 }

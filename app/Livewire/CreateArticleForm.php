@@ -33,6 +33,7 @@ class CreateArticleForm extends Component
     {
 
         $this->validate();
+
         $this->article = Article::create([
 
             'title' => $this->title,
@@ -76,7 +77,7 @@ class CreateArticleForm extends Component
     public function updatedTemporaryImages()
     {
         if ($this->validate([
-            'temporary_images.*' => 'image|max:1024',
+            'temporary_images.*' => 'image|max:4086',
             'temporary_images'=>'max:6'
 
         ])) {
