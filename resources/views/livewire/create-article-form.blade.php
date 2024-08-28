@@ -1,29 +1,29 @@
 <form class="bg-body-tertiary shadow-primary border rounded-4 p-5 my-5" wire:submit="store">
      <div class="mb-3 pb-4_5 position-relative">
           <x-feedback />
-          <label for="title" class="form-label">Titolo:</label>
+          <label for="title" class="form-label">{{__("ui.title:")}}</label>
           <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
                wire:model.blur="title">
           <x-validation field="title" />
 
      </div>
      <div class="mb-3 pb-4_5 position-relative">
-          <label for="description" class="form-label">Descrizione:</label>
+          <label for="description" class="form-label">{{__("ui.description:")}}</label>
           <textarea id="description" cols="30" rows="5" class="form-control @error('description') is-invalid @enderror"
                wire:model.blur="description"></textarea>
           <x-validation field="description" />
      </div>
      <div class="mb-3 pb-4_5 position-relative">
-          <label for="price" class="form-label">Prezzo:</label>
+          <label for="price" class="form-label">{{__("ui.price:")}}</label>
           <input type="text" class="form-control @error('price') is-invalid @enderror" id="price"
                wire:model.blur="price">
           <x-validation field="price" />
 
      </div>
      <div class="mb-3 pb-4_5 position-relative">
-          <label for="price" class="form-label">Categoria:</label>
+          <label for="price" class="form-label">{{__("ui.category:")}}</label>
           <select id="category" wire:model.blur="category" class="form-control  @error('category') is-invalid @enderror">
-               <option selected disabled value=""> -- seleziona una categoria -- </option>
+               <option selected disabled value=""> -- {{__("ui.select a category")}} -- </option>
                @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ Str::ucFirst($category->name) }}</option>
                @endforeach
@@ -44,7 +44,7 @@
      @if (!empty($images))
           <div class="row">
                <div class="col-12">
-                    <p>Photo preview</p>
+                    <p>{{__("ui.photo preview:")}}</p>
                     <div class="row border border-4 border-success rounded shadow py-4">
                          @foreach ($images as $key => $image)
                               <div class="col d-flex flex-column align-items-center my-3">
@@ -62,7 +62,7 @@
      
     
      <div class="row justify-content-center">
-          <button type="submit" class="btn btn-custom-primary col-6 mt-5 fs-5">Crea</button>
+          <button type="submit" class="btn btn-custom-primary col-6 mt-5 fs-5">{{__("ui.create:")}}</button>
      </div>
 
 </form>

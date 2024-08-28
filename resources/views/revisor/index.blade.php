@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-12 col-md-3">
                 <div class="rounded shadow bg-body-secondary">
-                    <h1 class="display-5 text-center pb-2"> Revisor dashboard</h1>
+                    <h1 class="display-5 text-center pb-2">{{__("ui.revisor dashboard")}}</h1>
                 </div>
             </div>
         </div>
@@ -51,12 +51,12 @@
                         <form action="{{route('reject',['article'=> $article_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btn-danger py-2 px-5 fw-bold">Rifiuta</button>
+                            <button class="btn btn-danger py-2 px-5 fw-bold">{{__("ui.reject")}}</button>
                         </form>
                         <form action="{{route('accept',['article'=> $article_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btn-success py-2 px-5 fw-bold">Accetta</button>
+                            <button class="btn btn-success py-2 px-5 fw-bold">{{__("ui.accept")}}</button>
                         </form>
                     </div>
                 </div>
