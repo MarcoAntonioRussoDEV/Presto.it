@@ -12,7 +12,11 @@ use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
-
+    public $languages = [
+        "en",
+        "it",
+        "fr"
+    ];
     /**
      * Register any application services.
      */
@@ -28,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Paginator::useBootstrap();
-
+        View::share('languages', $this->languages);
         if (Schema::hasTable('categories')){
             View::share('categories', Category::orderBy('name')->get());
         }
