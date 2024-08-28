@@ -13,7 +13,10 @@ return
      'accessori'=>'Les accessoires',
      'motori'=>'La voiture',
      'logIn'=>'Se connecter',
-     'signUp'=>'Enregistrer',
+     'signUp'=>'S\'enregistrer',
      'lastArticles'=>'Les articles récents',
-     'categories'=>'Les catégories'
+     'categories'=>'Les catégories',
+     'do you want to become an auditor'=>'Vous souhaitez devenir auditeur?',
+     'click and make a request to the admin!'=>'Cliquez et faites demande à l\'administrateur!',
+     'send a request!'=>'Envoyez votre demande!'
 ];
