@@ -15,7 +15,7 @@
                @endif
                @auth
                <div>
-                    <a href="{{ route("create.article") }}" class="btn btn-custom-primary col-6 col-md-2">Crea Articolo</a>
+                    <a href="{{ route("create.article") }}" class="btn btn-custom-primary col-6 col-md-2">{{__("ui.create an article")}}</a>
                </div>
                @endauth
 
