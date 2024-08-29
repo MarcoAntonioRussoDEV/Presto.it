@@ -22,9 +22,4 @@
         
     <button class="btn btn-warning w-100 mt-5">{{__("ui.send")}}</button>
 
-
-    <div>
-        <h3>{{__("ui.avarage of reviews")}}: {{ $averageGrade ? number_format($averageGrade, 1) : 'Nessuna recensione' }}</h3> 
-    </div>
-    
 </form>

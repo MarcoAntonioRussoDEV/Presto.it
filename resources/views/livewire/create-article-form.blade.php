@@ -1,7 +1,7 @@
 <form class="bg-body-tertiary shadow-primary border rounded-4 p-5 my-5" wire:submit="store">
      <div class="mb-3 pb-4_5 position-relative">
           <x-feedback />
-          <label for="title" class="form-label">{{__("ui.title:")}}</label>
+          <label for="title" class="form-label">{{__("ui.title")}}</label>
           <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
                wire:model.blur="title">
           <x-validation field="title" />
