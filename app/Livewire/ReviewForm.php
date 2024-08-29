@@ -51,9 +51,9 @@ class ReviewForm extends Component
         $this->validate();
         if (Auth::user()->id === $this->article->user->id) {
 
-            session()->flash('error', "Non puoi recensire un tuo articolo");
+            session()->flash('error', __('ui.youCannotReviewYourOwnItem'));
         } else if (Auth::user()->reviews->where('article_id', $article_id)->count() > 0) {
-            session()->flash('error', "Hai già recensito questo articolo");
+            session()->flash('error', __('ui.youHaveAlreadyReviewedThisItem'));
         } else {
 
             $review = Review::create([
