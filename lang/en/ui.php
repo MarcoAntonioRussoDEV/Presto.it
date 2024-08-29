@@ -2,7 +2,7 @@
 return
     [
         'hello' => 'Hello',
-        'allArticles' => 'All the articles',
+        'allArticles' => 'All articles',
         'elettronica' => 'Electronics',
         'abbigliamento' => 'Clothing',
         'salute e bellezza' => 'Health and beauty',
@@ -57,15 +57,22 @@ return
         'dashbord'=>'Dashboard',
         'log out'=>'Log out',
         'revisorArea'=>'Revisor area',
-        'articleCreatedSuccessfully' => "",
-        'youAcceptedTheArticle' => "",
-        'youRejectedTheArticle' => "",
-        'congratulationsYouHaveAppliedToBecomeAReviewer' => "",
-        'attentionYouHaveAlreadyRequestedToBecomeAReviewer' => "",
-        'profilePictureUpdatedSuccessfully' => "",
-        'reservedAreaForReviewers' => "",
-        'youCannotReviewYourOwnItem' => "",
-        'youHaveAlreadyReviewedThisItem' => "",
-        
+        'you are not still registered?'=>'You are not still registered?',
+        'password'=>'password',
+        'confirm password'=>'Confirm password',
+        'register'=>'Register',
+        'you are already registered?'=>'You are already registered?',
+        'articleCreatedSuccessfully' => 'Article created successfully',
+        'youAcceptedTheArticle' => 'You accepted the article ',
+        'youRejectedTheArticle' =>'You rejected the article',
+        'congratulationsYouHaveAppliedToBecomeAReviewer' =>'Congratulations you have applied to be a reviewer',
+        'attentionYouHaveAlreadyRequestedToBecomeAReviewer' =>'Attention you have already requested to become a reviewer',
+        'profilePictureUpdatedSuccessfully' => 'Profile Picture updated successfully',
+        'reservedAreaForReviewers' => 'Reserved Area for reviewers',
+        'youCannotReviewYourOwnItem' => 'You cannot review your own item',
+        'youHaveAlreadyReviewedThisItem' => 'You have already reviewed this item',
+        'name'=>'name'
+
+
 
     ];

@@ -13,7 +13,7 @@
             <div class=" col-8 col-lg-3 p-0 pb-1 position-relative ">
                 <x-validation field="name" authForm="true" />
                 <input type="text" class="custom-floating-input @error("name") is-invalid @enderror" id="floatingName" placeholder="" name="name" value="{{ old('name') }}">
-                <label class="custom-floating-label" for="floatingName">Nome</label>
+                <label class="custom-floating-label" for="floatingName">{{__("ui.name")}}</label>
             </div>
             <div class=" col-8 col-lg-3 p-0 pb-1 position-relative">
                 <x-validation field="email" />
@@ -22,18 +22,18 @@
             </div>
             <div class="mb-3 col-8 col-lg-3 p-0 pb-1 position-relative">
                 <input type="password" class="custom-floating-input @error("password") is-invalid @enderror" id="floatingPassword" placeholder="" name="password" value="{{ old('password') }}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Minimo 8 caratteri" data-bs-custom-class="custom-tooltip">
-                <label class="custom-floating-label" for="floatingPassword">Password</label>
+                <label class="custom-floating-label" for="floatingPassword">{{__("ui.password")}}</label>
                 <img class="pe-4 visibility" id="visibility" src="{{ url("asset/icons/visibility-on.svg") }}" alt="">
                 <x-validation field="password" />
             </div>
             <div class="col-8 col-lg-3 p-0 pb-1 position-relative">
                 <input type="password" class="custom-floating-input @error("password_confirmation") is-invalid @enderror" id="floatingPassword_confirmation" placeholder="" name="password_confirmation" value="{{ old('password_confirmation') }}">
-                <label class="custom-floating-label" for="floatingPassword_confirmation">Conferma Password</label>
+                <label class="custom-floating-label" for="floatingPassword_confirmation">{{__("ui.confirm password")}}</label>
                 <x-validation field="password_confirmation" />
             </div>
-            <button type="submit"  class="btn btn-custom-primary p-3 col-8 col-lg-3 mb-2" >Registrati</button>
+            <button type="submit"  class="btn btn-custom-primary p-3 col-8 col-lg-3 mb-2" >{{__("ui.register")}}</button>
             <div class="col-8 col-lg-3 px-0"><x-login-google /></div>
-            <a href="{{ route("login") }}" class="col-8 col-lg-3 text-center small">Sei già registrato?</a>
+            <a href="{{ route("login") }}" class="col-8 col-lg-3 text-center small">{{__("ui.you are already registered?")}}</a>
         </form>
     </div>
 </x-layout>
