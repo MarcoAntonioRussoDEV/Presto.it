@@ -21,7 +21,7 @@ return
     'click and make a request to the admin!' => 'Cliquez et faites demande à l\'administrateur!',
     'send a request!' => 'Envoyez votre demande!',
     'articles of the category'=>'Les articles de la catégorie',
-    'publishAnArticle'=>'Publiez un article',
+    'publish an article'=>'Publiez un article',
     'there are no articles for this category'=>'Il n\'y a d\'articles pour cette catégorie ',
     'no articles match your search'=>'Aucun article ne correspond à votre recherche',
     'search results'=>'résultats de recherche',
