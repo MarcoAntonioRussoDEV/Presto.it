@@ -41,6 +41,10 @@
     max-width: 28vw;
 }
 
+.custom-max-h-card{
+    max-height: 200px;
+}
+
 #logo-img{
     width: 12rem;
     

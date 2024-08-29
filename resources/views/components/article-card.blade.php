@@ -1,5 +1,5 @@
 <div class="card p-0 custom-card-size">
-    <img src="{{$article->images->isNotEmpty() ? ($article->images->first()->getUrl(300,200)) : url("asset/img/placeholders/image-placeholder.webp")}}" 
+    <img class="custom-max-h-card" src="{{$article->images->isNotEmpty() ? ($article->images->first()->getUrl(300,200)) : url("asset/img/placeholders/image-placeholder.webp")}}" 
     class="card-img-top" alt="immagine dell'articolo {{ $article->title}}">
     {{--<img src="{{url("asset/img/placeholders/image-placeholder.webp")}}" class=" img-fluid card-img-top" alt="...">--}}
     <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="badge bg-primary position-absolute top-0 end-0 m-2 text-decoration-none fw-semibold">#{{ __("ui.{$article->category->name}") }}</a>

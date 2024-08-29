@@ -56,6 +56,16 @@ return
         'dashboardUser'=>'Dashboard user',
         'dashbord'=>'Dashboard',
         'log out'=>'Log out',
-        'revisorArea'=>'Revisor area'
+        'revisorArea'=>'Revisor area',
+        'articleCreatedSuccessfully' => "",
+        'youAcceptedTheArticle' => "",
+        'youRejectedTheArticle' => "",
+        'congratulationsYouHaveAppliedToBecomeAReviewer' => "",
+        'attentionYouHaveAlreadyRequestedToBecomeAReviewer' => "",
+        'profilePictureUpdatedSuccessfully' => "",
+        'reservedAreaForReviewers' => "",
+        'youCannotReviewYourOwnItem' => "",
+        'youHaveAlreadyReviewedThisItem' => "",
+        
 
     ];

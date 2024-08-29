@@ -56,7 +56,8 @@ return [
     'dashboardUser'=>'Interfaccia utente',
     'dashboard'=>'Interfaccia',
     'log out'=>'Esci',
-    'revisorArea'=>'Zona revisore'
+    'revisorArea'=>'Zona revisore',
+
 
 
 

@@ -21,7 +21,11 @@
                 </button>
             </div>
             @else
-                <img src="https://picsum.photos/300" alt="Nessuan foto inserita dall'utente">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url('/asset/img/placeholders/image-placeholder.webp') }}" class="d-block w-100" alt="Empty-photo">
+                </div>
+            </div>
             @endif
             </div>
             <div class="col-12 col-md-6 mb-3 height-custom text-center">

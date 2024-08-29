@@ -53,7 +53,7 @@ class CreateArticleForm extends Component
         }
 
         //$this->reset();
-        session()->flash('success', 'Articolo creato correttamente');
+        session()->flash('success', __('ui.articleCreatedSuccessfully'));
         $this->clearForm();
     }
 
@@ -74,11 +74,15 @@ class CreateArticleForm extends Component
         return view('livewire.create-article-form');
     }
 
+    public function messages(){
+        return ['temporary_images.*.dimensions' => "minimum dimensions 300x200 pixels"];
+    }
     public function updatedTemporaryImages()
     {
         if ($this->validate([
-            'temporary_images.*' => 'image|max:4086',
-            'temporary_images' => 'max:6'
+            'temporary_images.*' => 'image|max:4086|dimensions:min_width=300,min_height=200',
+            'temporary_images' => 'max:6',
+            
 
         ])) {
         foreach ($this->temporary_images as $image) {
