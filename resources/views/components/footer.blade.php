@@ -8,7 +8,7 @@
       </div>
 
       <div class="col-lg-6 col-md-12 text-center">
-        <h5 class="text-uppercase">{{__("ui.do you want to become a reviewer?")}}</h5>
+        <h5 class="text-uppercase">{{__("ui.do you want to become a revisor?")}}</h5>
         <p>
           {{__("ui.click and make a request to the admin!")}}
         </p>

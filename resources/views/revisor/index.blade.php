@@ -65,9 +65,9 @@
             <div class="row justify-content-center align-items-center height-custom text-center">
                 <div class="col-12">
                     <h1 class="fst-italic display-4">
-                        Nessun articolo da revisionare
+                        {{__("ui.no article reviewed")}}
                     </h1>
-                    <a href="{{ route('homepage') }}" class="mt-5 btn btn-success"> Torna all'homepage</a>
+                    <a href="{{ route('homepage') }}" class="mt-5 btn btn-success">{{__("ui.return to the homepage")}}</a>
                 </div>
             </div>
         @endif

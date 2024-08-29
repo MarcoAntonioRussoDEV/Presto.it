@@ -43,5 +43,19 @@ return
         'write a review!'=>'Write a review!',
         'text'=>'Text',
         'send'=>'Send',
-        'average of reviews'=>'Average of reviews'
+        'average of reviews'=>'Average of reviews',
+        'there are no reviews for this article'=>'There are no reviews for this article',
+        'revisor dashboard'=>'Revisor dashboard',
+        'reject'=>'Reject',
+        'accept'=>'Accept',
+        'no article reviewed'=>'No article reviewed',
+        'return to the homepage'=>'Return to the homepage',
+        'add'=>'Add',
+        'welcome'=>'Welcome',
+        'click on the image for changing it'=>'Click on the image for changing it',
+        'dashboardUser'=>'Dashboard user',
+        'dashbord'=>'Dashboard',
+        'log out'=>'Log out',
+        'revisorArea'=>'Revisor area'
+
     ];
