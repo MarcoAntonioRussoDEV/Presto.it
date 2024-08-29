@@ -8,6 +8,7 @@ use App\Jobs\ResizeImage;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 use Livewire\WithFileUploads;
 
 class CreateArticleForm extends Component
@@ -48,6 +49,8 @@ class CreateArticleForm extends Component
                 $newFileName = "articles/{$this->article->id}";
                 $newImage = $this->article->images()->create(['path' => $image->store($newFileName, 'public')]);
                 dispatch(new ResizeImage($newImage->path, 300,200));
+                // ! Cancellazione immagine originale
+                //File::delete(storage_path("app/public/$newImage->path"));
             }
             
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
