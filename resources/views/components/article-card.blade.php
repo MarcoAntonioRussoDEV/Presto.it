@@ -15,7 +15,7 @@
             
         </p>
         <div class="d-flex justify-self-end justify-content-between align-items-end w-100">
-            <a href="{{ route("article.show", $article) }}" class="btn btn-custom-primary">Dettagli</a>
+            <a href="{{ route("article.show", $article) }}" class="btn btn-custom-primary">{{__("ui.details")}}</a>
             <p class="card-text fw-semibold fs-3">{{$article->price}} €</p>
         </div>
     </div>

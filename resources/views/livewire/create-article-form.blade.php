@@ -23,7 +23,7 @@
      <div class="mb-3 pb-4_5 position-relative">
           <label for="price" class="form-label">{{__("ui.category:")}}</label>
           <select id="category" wire:model.blur="category" class="form-control  @error('category') is-invalid @enderror">
-               <option selected disabled value=""> -- {{__("ui.select a category")}} -- </option>
+               <option selected disabled value=""> -- {{__("ui.select a category:")}} -- </option>
                @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ Str::ucFirst($category->name) }}</option>
                @endforeach

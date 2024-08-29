@@ -15,7 +15,7 @@
             <form action="{{route('restore', $article)}}" method="POST">
                 @csrf
                 @method('PATCH')
-                <button class="fw-bold btn btn-outline-info btn-sm">Ripristina</button>
+                <button class="fw-bold btn btn-outline-info btn-sm">{{__("ui.restore")}}</button>
             </form>
         </div>
         <button type="button" class="btn-close py-6"  data-bs-dismiss="alert" aria-label="Close"></button>
