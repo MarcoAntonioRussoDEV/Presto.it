@@ -78,7 +78,7 @@ class CreateArticleForm extends Component
     {
         if ($this->validate([
             'temporary_images.*' => 'image|max:4086',
-            'temporary_images'=>'max:6'
+            'temporary_images' => 'max:6'
 
         ])) {
         foreach ($this->temporary_images as $image) {
