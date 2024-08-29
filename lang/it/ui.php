@@ -20,7 +20,7 @@ return [
     'do you want to become a revisor?'=>'Vuoi diventare revisore?',
     'click and make a request to the admin!'=>'Clicca e fai richiesta all\'amministratore!',
     'send a request!'=>'Invia richiesta!',
-    'publish an article'=>'Publica un articolo',
+    'publishAnArticle'=>'Publica un articolo',
     'there are no articles for this category'=>'Non ci sono articoli per questa categoria',
     'articles of the category'=>'Gli articoli della categoria',
     'no articles match your search'=>'Nessun articolo corrisponde alla vostra ricerca',

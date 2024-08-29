@@ -23,7 +23,7 @@ return
         'no articles match your search'=>'No articles match your search',
         'search results'=>'search results',
         'articles of the category'=>'Articles of the category',
-        'publish an article'=>'Publish an article',
+        'publishAnArticle'=>'Publish an article',
         'there are no articles for this category'=>'There are no articles for this category',
         "createArticle" => "Create article",
         "findWhatYouAreLookingFor" => "Find what you're looking for in a flap of a wing!",
