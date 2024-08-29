@@ -34,7 +34,7 @@ return
         'restore'=>'restore',
         'sign in with google'=>'Sign in with google',
         'search'=>'search',
-        'title:'=>'Title:',
+        'title'=>'Title',
         'description:'=>'Description:',
         'price:'=>'Price:',
         'category:'=>'Category:',

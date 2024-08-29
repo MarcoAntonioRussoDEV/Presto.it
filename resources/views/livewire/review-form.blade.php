@@ -22,6 +22,4 @@
         
     <button class="btn btn-warning w-100 mt-5">{{__("ui.send")}}</button>
 
-
-    
 </form>
