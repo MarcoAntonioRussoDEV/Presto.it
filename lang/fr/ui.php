@@ -17,7 +17,7 @@ return
     'signUp' => 'S\'enregistrer',
     'lastArticles' => 'Les articles récents',
     'categories' => 'Les catégories',
-    'do you want to become a reviewer?' => 'Vous souhaitez devenir un réviseur?',
+    'do you want to become a revisor?' => 'Vous souhaitez devenir un réviseur?',
     'click and make a request to the admin!' => 'Cliquez et faites demande à l\'administrateur!',
     'send a request!' => 'Envoyez votre demande!',
     'articles of the category'=>'Les articles de la catégorie',
@@ -26,7 +26,7 @@ return
     'no articles match your search'=>'Aucun article ne correspond à votre recherche',
     'search results'=>'résultats de recherche',
     "createArticle" => 'Créez un article',
-    "findWhatYouAreLookingFor" =>'Trouvez ce que vous cherchez',
+    "findWhatYouAreLookingFor" =>'Trouvez ce que vous cherchez !',
     "wordOfGianfalco" =>'Parole de Gianfalco',
     'there are no articles'=>'Il n\'y a d\'articles',
     'buy'=>'Achetez',
@@ -43,7 +43,22 @@ return
     'write a review!'=>'Ecrivez un commentaire!',
     'text'=>'Le texte',
     'send'=>'Envoyez',
-    'average of reviews'=>'Moyenne des commentaires'
+    'average of reviews'=>'Moyenne des commentaires',
+    'there are no reviews for this article'=>'Il  n\'y a de commentaire pour cet article',
+    'revisor dashboard'=>'Interface du réviseur',
+    'reject'=>'Refuser',
+    'accept'=>'Accepter',
+    'no article reviewed'=>'Aucun article à réviser',
+    'return to the homepage'=>'Retourne à la page d\'accueil',
+    'add'=>'Ajoutez',
+    'welcome'=>'Bienvenu',
+    'click on the image for changing it'=>'Cliquez sur l\'image pour la changer',
+    'dashboardUser'=>'Interface de l\'utilisateur',
+    'dashboard'=>'Interface',
+    'log out'=>'Se déconnecter',
+    'revisorArea'=>'espace du réviseur'
+
+
 
 
   ];

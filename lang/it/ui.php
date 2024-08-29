@@ -1,7 +1,7 @@
 <?php
 return [
     
-    'Hello'=>'Ciao',
+    'hello'=>'Ciao',
     'allArticles'=>'Tutti gli articoli',
     'elettronica'=>'elettronica',
     'abbigliamento'=>'abbigliamento',
@@ -17,7 +17,7 @@ return [
     'signUp'=>'Registrati',
     'lastArticles'=>'Articoli recenti',
     'categories'=>'Categorie',
-    'do you want to become a reviewer?'=>'Vuoi diventare revisore?',
+    'do you want to become a revisor?'=>'Vuoi diventare revisore?',
     'click and make a request to the admin!'=>'Clicca e fai richiesta all\'amministratore!',
     'send a request!'=>'Invia richiesta!',
     'publish an article'=>'Publica un articolo',
@@ -43,7 +43,20 @@ return [
     'write a review!'=>'Scrivi una recensione!',
     'text'=>'Testo',
     'send'=>'Invia',
-    'average of reviews'=>'Media delle recensioni'
+    'average of reviews'=>'Media delle recensioni',
+    'there are no reviews for this article'=>'Non ci sono recensioni per questo articolo',
+    'revisor dashboard'=>'Interfaccia revisore',
+    'reject'=>'Rifiuta',
+    'accept'=>'Accetta',
+    'no article reviewed'=>'Nessun articolo da revisionare',
+    'return to the homepage'=>'Torna all\' homepage',
+    'add'=>'Aggiungi',
+    'welcome'=>'Benvenuto',
+    'click on the image for changing it'=>'Clicca e cambia immagine',
+    'dashboardUser'=>'Interfaccia utente',
+    'dashboard'=>'Interfaccia',
+    'log out'=>'Esci',
+    'revisorArea'=>'Zona revisore'
 
 
 

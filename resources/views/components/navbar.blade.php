@@ -59,14 +59,14 @@
                 @auth
     
                     <ul class="dropdown-menu dropdown-menu-end pb-0">
-                        <li><h6 class="dropdown-header">Ciao {{ auth()->user()->name }}</h6></li>
+                        <li><h6 class="dropdown-header">{{__("ui.hello")}} {{ auth()->user()->name }}</h6></li>
                         <li>
                             <hr class="dropdown-divider p-0 m-0">
                         </li>
                         
                         <li>
                             <a class="dropdown-item d-flex gap-2" href="{{ route('user.dashboard') }}">
-                                <span class="material-symbols-outlined fw-light">dashboard</span>Dashboard utente
+                                <span class="material-symbols-outlined fw-light">Dashboard</span>{{__("ui.dashboardUser")}}
                             </a>
                         </li>
                         <li>
@@ -75,12 +75,12 @@
 
                         <li>
                             <a class="dropdown-item d-flex gap-2" href="{{ route('create.article') }}">
-                                <span class="material-symbols-outlined fw-light">add_circle</span>Crea articolo
+                                <span class="material-symbols-outlined fw-light">add_circle</span>{{__("ui.createArticle")}}
                             </a>
                             </li>
                         <li>
                             <a class="dropdown-item d-flex gap-2" href="{{ route('article.index') }}">
-                                <span class="material-symbols-outlined fw-light">list_alt</span>Tutti gli articoli
+                                <span class="material-symbols-outlined fw-light">list_alt</span>{{__("ui.allArticles")}}
                             </a>
                         </li>
                         <li>
@@ -91,7 +91,7 @@
                         <li class="d-flex justify-content-between align-items-center">
                             <a class="dropdown-item d-flex justify-content-between align-items-center gap-2" href="{{ route('revisor.index') }}">
                                 <i class="material-symbols-outlined fw-light">checklist</i>
-                                <p class="m-0">Zona revisore</p>
+                                <p class="m-0">{{__("ui.revisorArea")}}</p>
                                 @if (\App\Models\Article::toBeRevisedCount() !== 0)
                                     <span class="badge bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span>
                                 @else
@@ -108,7 +108,7 @@
                         <li>
                             <form method="POST" action="{{ route('logout') }}">@csrf
                                 <button class="dropdown-item hover-bg-danger hover-text-light py-1 rounded-bottom-2 d-flex gap-2" type="submit">
-                                    <span class="material-symbols-outlined fw-light">logout</span>Log out
+                                    <span class="material-symbols-outlined fw-light">logout</span>{{__("ui.log out")}}
                                 </button>
                             </form>
                         </li>
