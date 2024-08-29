@@ -25,7 +25,7 @@ class RevisorController extends Controller
       $article->setAccepted(true);
       return redirect()
          ->back()
-         ->with('info', "Hai accettato l'articolo " . '"' .  strtoupper($article->title) . '"')
+         ->with('info', __('ui.youAcceptedTheArticle') ." " . '"' .  strtoupper($article->title) . '"')
          ->with(compact('article'));
    }
    public function reject(Article $article)
@@ -33,7 +33,7 @@ class RevisorController extends Controller
       $article->setAccepted(false);
       return redirect()
          ->back()
-         ->with('info', "Hai rifiutato l'articolo " . '"' .  strtoupper($article->title) . '"')
+         ->with('info', __('ui.youRejectedTheArticle') ." " . '"' .  strtoupper($article->title) . '"')
          ->with(compact('article'));
          
    }
@@ -54,9 +54,9 @@ class RevisorController extends Controller
          Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
          $user->reviewer_requested = true;
          $user->save();
-         return redirect()->route('homepage')->with('success', "Complimenti, hai richiesto di diventare revisore");
+         return redirect()->route('homepage')->with('success', __('ui.congratulationsYouHaveAppliedToBecomeAReviewer'));
       }
-         return redirect()->route('homepage')->with('error', "Attenzione, hai già richiesto di diventare revisore");
+         return redirect()->route('homepage')->with('error', __('ui.attentionYouHaveAlreadyRequestedToBecomeAReviewer'));
 
    }
    public function makeRevisor(User $user){

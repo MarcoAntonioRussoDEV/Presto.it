@@ -24,7 +24,7 @@ class UserController extends Controller
             $user->save();
         }
 
-        return redirect()->back()->with('success', 'Immagine del profilo aggiornata con successo.');
+        return redirect()->back()->with('success', __('ui.profilePictureUpdatedSuccessfully'));
     }
 
 
