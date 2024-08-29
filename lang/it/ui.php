@@ -32,7 +32,7 @@ return [
     'buy'=>'Acquista',
     'details'=>'Dettagli',
     'restore'=>'Ripristina',
-    'sign in with google'=>'Crea un account Google',
+    'sign in with google'=>'Accedi con Google',
     'search'=>'ricerca',
     'title'=>'Titolo',
     'description:'=>'Descrizione:',
@@ -57,7 +57,24 @@ return [
     'dashboard'=>'Interfaccia',
     'log out'=>'Esci',
     'revisorArea'=>'Zona revisore',
+    'you are not still registered?'=>'Non sei ancora registrato?',
+    'password'=>'password',
+    'confirm password'=>'Conferma password',
+    'register'=>'Registrati',
+    'you are already registered?'=>'Sei già registrato?',
+    'articleCreatedSuccessfully' => 'L\'articolo è stato creato con successo ',
+    'youAcceptedTheArticle' => 'Hai accettato l\'articolo',
+    'youRejectedTheArticle' =>'Hai rifiutato l\'articolo',
+    'congratulationsYouHaveAppliedToBecomeAReviewer' =>'Congratulazioni hai fatto richiesta per diventare un revisore',
+    'attentionYouHaveAlreadyRequestedToBecomeAReviewer' =>'Attenzione hai già fatto richiesta di diventare un revisore ',
+    'profilePictureUpdatedSuccessfully' => 'Immagine del profilo aggiornata con successo',
+    'reservedAreaForReviewers' => 'Area riservata al revisore',
+    'youCannotReviewYourOwnItem' => 'Non puoi recensire lo stesso articolo',
+    'youHaveAlreadyReviewedThisItem' => 'tu hai già recensito questo articolo',
+    'name'=>'nome'
 
+
+    
 
 
 
