@@ -20,9 +20,30 @@ return [
     'do you want to become a reviewer?'=>'Vuoi diventare revisore?',
     'click and make a request to the admin!'=>'Clicca e fai richiesta all\'amministratore!',
     'send a request!'=>'Invia richiesta!',
+    'publish an article'=>'Publica un articolo',
+    'there are no articles for this category'=>'Non ci sono articoli per questa categoria',
+    'articles of the category'=>'Gli articoli della categoria',
+    'no articles match your search'=>'Nessun articolo corrisponde alla vostra ricerca',
+    'search results'=>'Risultati di ricerca',
     "createArticle" => "Crea articolo",
     "findWhatYouAreLookingFor" => "Trova ciò che cerchi in un batter d'ali!",
-    "wordOfGianfalco" => "Parola di Gianfalco"
+    "wordOfGianfalco" => "Parola di Gianfalco",
+    'there are no articles'=>'Non ci sono articoli',
+    'buy'=>'Acquista',
+    'details'=>'Dettagli',
+    'restore'=>'Ripristina',
+    'sign in with google'=>'Crea un account Google',
+    'search'=>'ricerca',
+    'title:'=>'Titolo:',
+    'description:'=>'Descrizione:',
+    'price:'=>'Prezzo:',
+    'category:'=>'Categoria:',
+    'select a category:'=>'Seleziona una categoria:',
+    'photo preview:'=>'Anteprima dell\'immagine:',
+    'write a review!'=>'Scrivi una recensione!',
+    'text'=>'Testo',
+    'send'=>'Invia',
+    'average of reviews'=>'Media delle recensioni'
 
 
 

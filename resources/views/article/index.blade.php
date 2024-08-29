@@ -1,7 +1,7 @@
 <x-layout>
     <div class="row height-custom justify-content-center align-items-center text-center">
         <div class="col-12">
-            <h1 class="display-1 mt-4">{{__("ui.all the articles")}}</h1>
+            <h1 class="display-1 mt-4">{{__("ui.allArticles")}}</h1>
         </div>
     </div>
     <div class="row justify-content-center align-items-center gy-5 my-5 px-5">

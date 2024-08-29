@@ -33,7 +33,7 @@
                 <div class="d-flex flex-column justify-content-start gap-4">
                     <p class="text-md-start">{{ $article->description }}</p>
                     <h4 class="fw-bold text-end">{{ $article->price }}€</h4>
-                    <button class="btn btn-success w-75 mx-auto">Acquista</button>
+                    <button class="btn btn-success w-75 mx-auto">{{__("ui.buy")}}</button>
                 </div>
             </div>
         </div>
