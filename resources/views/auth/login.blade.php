@@ -16,13 +16,13 @@
                 </div>
                 <div class="mb-3 col-8 col-lg-3 p-0 pb-1 position-relative">
                     <input type="password" class="custom-floating-input @error("password") is-invalid @enderror" id="floatingPassword" placeholder="" name="password" value="{{ old('password') }}">
-                    <label class="custom-floating-label" for="floatingPassword">Password</label>
+                    <label class="custom-floating-label" for="floatingPassword">{{__("ui.password")}}</label>
                     <img class="pe-4 visibility" id="visibility" src="{{ url("asset/icons/visibility-on.svg") }}" alt="">
                     <x-validation field="password" />
                 </div>
-                <button type="submit"  class="btn btn-custom-primary p-3 col-8 col-lg-3 mb-2">Accedi</button>
+                <button type="submit"  class="btn btn-custom-primary p-3 col-8 col-lg-3 mb-2">{{__("ui.logIn")}}</button>
                 <div class="col-8 col-lg-3 px-0"><x-login-google /></div>
-                <a href="{{ route("register") }}" class="col-8 text-center small">Non sei ancora registrato?</a>
+                <a href="{{ route("register") }}" class="col-8 text-center small">{{__("ui.you are not still registered?")}}</a>
             </form>
         </div>
 </div>

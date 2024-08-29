@@ -32,7 +32,7 @@ return
     'buy'=>'Achetez',
     'details'=>'Détails',
     'restore'=>'Restaurer',
-    'sign in with google'=>'Créer un compte Google',
+    'sign in with google'=>'Se connecter Google',
     'search'=>'recherche',
     'title:'=>'Le titre:',
     'description:'=>'La description:',
@@ -56,7 +56,13 @@ return
     'dashboardUser'=>'Interface de l\'utilisateur',
     'dashboard'=>'Interface',
     'log out'=>'Se déconnecter',
-    'revisorArea'=>'espace du réviseur'
+    'revisorArea'=>'espace du réviseur',
+    'you are not still registrered?'=>'Vous n\'êtes pas encore inscrit?',
+    'password'=>'mot de passe',
+    'confirm password'=>'Confirmez le mot de passe',
+    'register'=>'Créez un compte',
+    'you are already registered?'=>'Vous êtes déjà inscrit?'
+
 
 
 

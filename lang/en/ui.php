@@ -56,6 +56,21 @@ return
         'dashboardUser'=>'Dashboard user',
         'dashbord'=>'Dashboard',
         'log out'=>'Log out',
-        'revisorArea'=>'Revisor area'
+        'revisorArea'=>'Revisor area',
+        'you are not still registered?'=>'You are not still registered?',
+        'password'=>'password',
+        'confirm password'=>'Confirm password',
+        'register'=>'Register',
+        'you are already registered?'=>'You are already registered?',
+        'articleCreatedSuccessfully' => 'article c',
+        'youAcceptedTheArticle' => "",
+        'youRejectedTheArticle' => "",
+        'congratulationsYouHaveAppliedToBecomeAReviewer' => "",
+        'attentionYouHaveAlreadyRequestedToBecomeAReviewer' => "",
+        'profilePictureUpdatedSuccessfully' => "",
+        'reservedAreaForReviewers' => "",
+        'youCannotReviewYourOwnItem' => "",
+        'youHaveAlreadyReviewedThisItem' => "",
+
 
     ];

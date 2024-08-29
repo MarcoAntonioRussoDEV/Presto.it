@@ -56,7 +56,15 @@ return [
     'dashboardUser'=>'Interfaccia utente',
     'dashboard'=>'Interfaccia',
     'log out'=>'Esci',
-    'revisorArea'=>'Zona revisore'
+    'revisorArea'=>'Zona revisore',
+    'you are not still registered?'=>'Non sei ancora registrato?',
+    'password'=>'password',
+    'confirm password'=>'Conferma password',
+    'register'=>'Registrati',
+    'you are already registered?'=>'Sei già registrato?'
+
+
+    
 
 
 

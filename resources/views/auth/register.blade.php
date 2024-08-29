@@ -28,12 +28,12 @@
             </div>
             <div class="col-8 col-lg-3 p-0 pb-1 position-relative">
                 <input type="password" class="custom-floating-input @error("password_confirmation") is-invalid @enderror" id="floatingPassword_confirmation" placeholder="" name="password_confirmation" value="{{ old('password_confirmation') }}">
-                <label class="custom-floating-label" for="floatingPassword_confirmation">Conferma Password</label>
+                <label class="custom-floating-label" for="floatingPassword_confirmation">{{__("ui.confirm password")}}</label>
                 <x-validation field="password_confirmation" />
             </div>
-            <button type="submit"  class="btn btn-custom-primary p-3 col-8 col-lg-3 mb-2" >Registrati</button>
+            <button type="submit"  class="btn btn-custom-primary p-3 col-8 col-lg-3 mb-2" >{{__("ui.register")}}</button>
             <div class="col-8 col-lg-3 px-0"><x-login-google /></div>
-            <a href="{{ route("login") }}" class="col-8 col-lg-3 text-center small">Sei già registrato?</a>
+            <a href="{{ route("login") }}" class="col-8 col-lg-3 text-center small">{{__("ui.you are already registered?")}}</a>
         </form>
     </div>
 </x-layout>
