@@ -71,7 +71,7 @@ return [
     'reservedAreaForReviewers' => 'Area riservata al revisore',
     'youCannotReviewYourOwnItem' => 'Non puoi recensire lo stesso articolo',
     'youHaveAlreadyReviewedThisItem' => 'tu hai già recensito questo articolo',
-    'name'=>'nome'
+    'name'=>'Nome'
 
 
     
