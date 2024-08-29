@@ -62,7 +62,7 @@
      
     
      <div class="row justify-content-center">
-          <button type="submit" class="btn btn-custom-primary col-6 mt-5 fs-5">{{__("ui.create:")}}</button>
+          <button type="submit" class="btn btn-custom-primary col-6 mt-5 fs-5">{{__("ui.createArticle")}}</button>
      </div>
 
 </form>
