@@ -61,7 +61,18 @@ return
     'password'=>'mot de passe',
     'confirm password'=>'Confirmez le mot de passe',
     'register'=>'Créez un compte',
-    'you are already registered?'=>'Vous êtes déjà inscrit?'
+    'you are already registered?'=>'Vous êtes déjà inscrit?',
+    'articleCreatedSuccessfully' => 'L\'article a été créé avec succès',
+    'youAcceptedTheArticle' => 'Vous avez accepté l\'article',
+    'youRejectedTheArticle' =>'Vous avez refusé l\'article',
+    'congratulationsYouHaveAppliedToBecomeAReviewer' =>'Félicitations, vous avez fait demande pour devenir un réviseur',
+    'attentionYouHaveAlreadyRequestedToBecomeAReviewer' =>'Attention vous avez déjà fait demande pour devenir un réviseur',
+    'profilePictureUpdatedSuccessfully' => 'Photo Profil mise à jour avec succès',
+    'reservedAreaForReviewers' => 'Espace réservé aux réviseurs',
+    'youCannotReviewYourOwnItem' => 'Vous ne pouvez pas faire un commentaire sur le même article',
+    'youHaveAlreadyReviewedThisItem' => 'Vous avez déjà commenté cet article',
+    'name'=>'nom'
+
 
 
 
