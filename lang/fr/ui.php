@@ -71,7 +71,9 @@ return
     'reservedAreaForReviewers' => 'Espace réservé aux réviseurs',
     'youCannotReviewYourOwnItem' => 'Vous ne pouvez pas faire un commentaire sur le même article',
     'youHaveAlreadyReviewedThisItem' => 'Vous avez déjà commenté cet article',
-    'name'=>'Nom'
+    'name'=>'Nom',
+    'youAreARevisor' => "",
+    'thanksForYourWorkOnPresto' => "",
 
 
 
