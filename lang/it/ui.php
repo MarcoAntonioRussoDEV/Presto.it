@@ -70,8 +70,10 @@ return [
     'profilePictureUpdatedSuccessfully' => 'Immagine del profilo aggiornata con successo',
     'reservedAreaForReviewers' => 'Area riservata al revisore',
     'youCannotReviewYourOwnItem' => 'Non puoi recensire lo stesso articolo',
-    'youHaveAlreadyReviewedThisItem' => 'tu hai già recensito questo articolo',
-    'name'=>'Nome'
+    'youHaveAlreadyReviewedThisItem' => 'Hai già recensito questo articolo',
+    'name'=>'Nome',
+    'youAreARevisor' => 'Sei revisore',
+    'thanksForYourWorkOnPresto' => 'Grazie per il tuo lavoro su presto.it'
 
 
     

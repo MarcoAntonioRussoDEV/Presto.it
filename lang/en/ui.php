@@ -71,7 +71,9 @@ return
         'reservedAreaForReviewers' => 'Reserved Area for reviewers',
         'youCannotReviewYourOwnItem' => 'You cannot review your own item',
         'youHaveAlreadyReviewedThisItem' => 'You have already reviewed this item',
-        'name'=>'Name'
+        'name'=>'Name',
+        'youAreARevisor' => 'You are revisor',
+        'thanksForYourWorkOnPresto' => 'Thanks for your work on presto.it'
 
 
 
