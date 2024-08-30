@@ -72,8 +72,8 @@ return [
     'youCannotReviewYourOwnItem' => 'Non puoi recensire lo stesso articolo',
     'youHaveAlreadyReviewedThisItem' => 'Hai già recensito questo articolo',
     'name'=>'Nome',
-    'youAreARevisor' => "",
-    'thanksForYourWorkOnPresto' => "",
+    'youAreARevisor' => 'Sei revisore',
+    'thanksForYourWorkOnPresto' => 'Grazie per il tuo lavoro su presto.it'
 
 
     

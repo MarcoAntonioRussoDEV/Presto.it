@@ -72,8 +72,8 @@ return
     'youCannotReviewYourOwnItem' => 'Vous ne pouvez pas faire un commentaire sur le même article',
     'youHaveAlreadyReviewedThisItem' => 'Vous avez déjà commenté cet article',
     'name'=>'Nom',
-    'youAreARevisor' => "",
-    'thanksForYourWorkOnPresto' => "",
+    'youAreARevisor' => 'Vous êtes un réviseur',
+    'thanksForYourWorkOnPresto' => 'Merci pour votre travail sur presto.it'
 
 
 
