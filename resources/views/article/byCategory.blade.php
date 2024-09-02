@@ -17,7 +17,7 @@
                         {{__("ui.there are no articles for this category")}}!
                     </h3>
                     @auth
-                        <a class="btn btn-dark my-5"  href="{{route('create.article')}}">{{__("ui.publish an article")}}</a>
+                        <a class="btn btn-dark my-5"  href="{{route('create.article')}}">{{__("ui.publishAnArticle")}}</a>
                     @endauth
                 </div>
             @endforelse    
