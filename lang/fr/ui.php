@@ -57,7 +57,7 @@ return
     'dashboard'=>'Interface',
     'log out'=>'Se déconnecter',
     'revisorArea'=>'espace du réviseur',
-    'you are not still registrered?'=>'Vous n\'êtes pas encore inscrit?',
+    'you are not still registered?'=>'Vous n\'êtes pas encore inscrit?',
     'password'=>'mot de passe',
     'confirm password'=>'Confirmez le mot de passe',
     'register'=>'Créez un compte',

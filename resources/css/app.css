@@ -1,4 +1,5 @@
 @import 'bootstrap';
+@import 'bootstrap-icons';
 @import './style.css';
 @import './customFloatingLabels.css';
 @import './carousel.css';
