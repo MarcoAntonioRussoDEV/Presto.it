@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use Spatie\Image\Enums\Unit;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Foundation\Queue\Queueable;
@@ -33,6 +34,14 @@ class ResizeImage implements ShouldQueue
 
         Image::load($srcPath)
                 ->crop($w, $h, CropPosition::Center)
+                ->watermark(
+                    base_path('public/asset/img/logo-white.png'),
+                    width: 90,
+                    height: 30,
+                    paddingX: 5,
+                    paddingY: 5,
+                    paddingUnit: Unit::Percent
+                )
                 ->save($destPath);
     }
 }
