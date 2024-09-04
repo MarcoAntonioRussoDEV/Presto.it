@@ -18,7 +18,8 @@ class ReviewList extends Component
     public function render()
     {
         return view('livewire.review-list', [
-            'reviews'=> $this->article->reviews()->orderBy('created_at', 'desc')->simplePaginate(5)]);
+            'reviews'=> $this->article->reviews()->orderBy('created_at', 'desc')->simplePaginate(5)
+        ]);
 
     }
     public function mount($article)

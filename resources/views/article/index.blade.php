@@ -4,22 +4,8 @@
             <h1 class="display-1 mt-4">{{__("ui.allArticles")}}</h1>
         </div>
     </div>
-    <div class="row justify-content-center align-items-center gy-5 my-5 px-5">
-        @forelse($articles as $article)
-            <div class="col md-3 d-flex justify-content-center">
-                <x-article-card :article="$article" />
-            </div>
-        @empty
-            <div class="col-12">
-                <h3 class="text-center">
-                    {{__("ui.there are no articles")}}
-                </h3>
-            </div>
-        @endforelse
-    </div>
-    <div class="d-flex justify-content-center">
-        <div>
-            {{ $articles->links() }}
-        </div>
-    </div>
+    <main class="my-5">
+        <livewire-articles-index />
+    </main>
+
 </x-layout>
