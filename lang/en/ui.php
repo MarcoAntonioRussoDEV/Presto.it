@@ -73,7 +73,11 @@ return
         'youHaveAlreadyReviewedThisItem' => 'You have already reviewed this item',
         'name'=>'Name',
         'youAreARevisor' => 'You are revisor',
-        'thanksForYourWorkOnPresto' => 'Thanks for your work on presto.it'
+        'thanksForYourWorkOnPresto' => 'Thanks for your work on presto.it',
+        'price' => 'price',
+        'stars' => 'stars',
+        'all' => 'all',
+        'filters' => 'filters'
 
 
 

@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\Article;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Livewire\Attributes\On;
 
 
 class ArticlesIndex extends Component
@@ -17,6 +18,7 @@ class ArticlesIndex extends Component
     public $priceFilter;
     public $categoryFilter;
     public $gradeFilter;
+    public $is_paginate;
 
     public function mount(){
         $maxPrice = Article::orderByDesc('price')->get();
@@ -28,28 +30,48 @@ class ArticlesIndex extends Component
 
     public function render()
     {
-        $allArticles = Article::where('price', '<=', $this->priceFilter)
+        $allArticles = Article::where('is_accepted', true)
+                            ->where('price', '<=', $this->priceFilter)
                             ->where('avg_grade', '>=', $this->gradeFilter);
 
         if($this->categoryFilter != "all"){
             $allArticles->where('category_id', $this->categoryFilter);
         }
 
-        $allArticles = $allArticles->orderByDesc('created_at')->paginate(6);
+        if($allArticles->count() <= 6){
+            if($this->priceFilter != $this->maxPrice){
+                $allArticles = $allArticles->orderByDesc('price')->get();
+            }else{
+                $allArticles = $allArticles->orderByDesc('created_at')->get();
+            }
+            $this->is_paginate = false;
+        }else{
+            if($this->priceFilter != $this->maxPrice){
+                $allArticles = $allArticles->orderByDesc('price')->simplePaginate(6);
+            }else{
+                $allArticles = $allArticles->orderByDesc('created_at')->simplePaginate(6);
+            }
+            $this->is_paginate = true;
+
+        }
+
 
         return view('livewire.articles-index', [
             'allArticles' => $allArticles
         ]);
     }
 
-    public function gradeFilterReset(){
-        $this->gradeFilter = 0;
-    }
 
-    public function resetFilters(){
-        $this->articles = Article::all();
-        $this->priceFilter = $this->maxPrice;
-        $this->gradeFilter = 0;
-        $this->categoryFilter = "all"; 
+    #[On("refreshPrice")]
+    public function setPriceFilter($price){
+        $this->priceFilter = $price;
+    }
+    #[On("refreshCategories")]
+    public function setCategoryFilter($category){
+        $this->categoryFilter = $category;
+    }
+    #[On("refreshGrade")]
+    public function setGradeFilter($grade){
+        $this->gradeFilter = $grade;
     }
 }

@@ -173,6 +173,12 @@ button:focus .animate-vanish {
     word-wrap: break-word;
 }
 
+.position-md-fixed{
+    @media screen and (min-width: 756px) {
+        position: fixed;
+    }
+}
+
 @keyframes theme-animation-vanish {
     100% {
         rotate: 360deg;

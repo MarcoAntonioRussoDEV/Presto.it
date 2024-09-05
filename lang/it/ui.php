@@ -73,7 +73,12 @@ return [
     'youHaveAlreadyReviewedThisItem' => 'Hai già recensito questo articolo',
     'name'=>'Nome',
     'youAreARevisor' => 'Sei revisore',
-    'thanksForYourWorkOnPresto' => 'Grazie per il tuo lavoro su presto.it'
+    'thanksForYourWorkOnPresto' => 'Grazie per il tuo lavoro su presto.it',
+    'price' => 'prezzo',
+    'stars' => 'stelle',
+    'all' => 'tutti',
+    'filters' => 'filtri'
+
 
 
     
