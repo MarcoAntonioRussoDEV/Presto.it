@@ -1,7 +1,7 @@
 <article id="card-section" class="d-flex justify-content-center">
     @forelse ($articles as $article)
         <div class="cards col-4 col-xl-2 d-flex align-items-end justify-content-start px-1" role="button" onclick="document.querySelector('#articleLink{{$article->id}}').click()">
-            <img class="rounded rounded-3 cards-img" src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(300,200) : url("asset/img/placeholders/image-placeholder.webp") }}" alt="image-{{ $article->title }}">
+            <img class="rounded rounded-3 cards-img" src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(600,400) : url("asset/img/placeholders/image-placeholder.webp") }}" alt="image-{{ $article->title }}">
             <div class="cards-text d-flex flex-column justify-content-start text-start gap-1">
                 <h3 class="text-truncate py-1 {{session('theme') == 'light'? 'custom-text-light':''}}">{{ $article->title }}</h3>
                 <a  href="{{ route("byCategory", $article->category) }}" class="badge text-bg-custom-primary align-self-start text-decoration-none">{{$article->category->name}}</a>

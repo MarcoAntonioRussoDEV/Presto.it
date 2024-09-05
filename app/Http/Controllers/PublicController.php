@@ -26,7 +26,6 @@ class PublicController extends Controller
     {
         $query = $request->input('query');
         $articles = Article::search($query)->where('is_accepted', 1)->paginate(5);
-        // dd($articles);
         return view('article.searched', ['articles' => $articles, 'query' => $query]);
     }
     public function setLanguage($lang)

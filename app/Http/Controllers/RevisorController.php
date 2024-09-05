@@ -54,9 +54,9 @@ class RevisorController extends Controller
          Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
          $user->reviewer_requested = true;
          $user->save();
-         return redirect()->route('homepage')->with('success', __('ui.congratulationsYouHaveAppliedToBecomeAReviewer'));
+         return redirect()->back()->with('success', __('ui.congratulationsYouHaveAppliedToBecomeAReviewer'));
       }
-         return redirect()->route('homepage')->with('error', __('ui.attentionYouHaveAlreadyRequestedToBecomeAReviewer'));
+         return redirect()->back()->with('error', __('ui.attentionYouHaveAlreadyRequestedToBecomeAReviewer'));
 
    }
    public function makeRevisor(User $user){

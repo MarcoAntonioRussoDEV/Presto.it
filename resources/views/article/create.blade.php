@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <h1 class="display-4 mt-5">
-                    {{__("ui.publish an article")}}
+                    {{__("ui.publishAnArticle")}}
                 </h1>
             </div>
         </div>

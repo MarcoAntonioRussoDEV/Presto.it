@@ -55,6 +55,7 @@ class CreateArticleForm extends Component
                 RemoveFaces::withChain([
 
                     new ResizeImage($newImage->path, 300,200),
+                    new ResizeImage($newImage->path, 600,400),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id),
                     
@@ -91,12 +92,12 @@ class CreateArticleForm extends Component
     }
 
     public function messages(){
-        return ['temporary_images.*.dimensions' => "minimum dimensions 300x200 pixels"];
+        return ['temporary_images.*.dimensions' => "minimum dimensions 600x400 pixels"];
     }
     public function updatedTemporaryImages()
     {
         if ($this->validate([
-            'temporary_images.*' => 'image|max:4086|dimensions:min_width=300,min_height=200',
+            'temporary_images.*' => 'image|max:4086|dimensions:min_width=600,min_height=400',
             'temporary_images' => 'max:6',
             
 

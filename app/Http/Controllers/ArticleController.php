@@ -21,7 +21,10 @@ class ArticleController extends Controller
 
     public function show(Article $article)
     {
-        return view('article.show', compact('article'));
+        if($article->is_accepted){
+            return view('article.show', compact('article'));
+        }
+        abort(403);
     }
 
     public function index()

@@ -161,7 +161,7 @@ button:focus .animate-vanish {
 
 #clickAreaProfileImage:hover {
     opacity: unset !important;
-    border: .3rem dashed whitesmoke !important;
+    border: .3rem dashed var(--bs-body-color) !important;
 
 }
 

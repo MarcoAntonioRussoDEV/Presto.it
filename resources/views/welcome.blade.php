@@ -1,5 +1,5 @@
 <x-layout>
-          <x-feedback />
+         <div class="container"> <x-feedback /></div>
      <div class="container-fluid text-center">
           <div class="row custom-min-vh justify-content-center align-items-center">
 
