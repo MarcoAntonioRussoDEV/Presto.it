@@ -77,7 +77,8 @@ return
         'price' => 'price',
         'stars' => 'stars',
         'all' => 'all',
-        'filters' => 'filters'
+        'filters' => 'filters',
+        'passwordRules' => 'Minimum 8 characters'
 
 
 

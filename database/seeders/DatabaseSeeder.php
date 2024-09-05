@@ -49,6 +49,7 @@ class DatabaseSeeder extends Seeder
             'remember_token' => Str::random(10),
             'is_revisor' => true
         ]);
+        
         Article::factory(20)->create();
     }
 }

@@ -21,7 +21,7 @@
                 <label class="custom-floating-label" for="floatingEmail">Email</label>
             </div>
             <div class="mb-3 col-8 col-lg-3 p-0 pb-1 position-relative">
-                <input type="password" class="custom-floating-input @error("password") is-invalid @enderror" id="floatingPassword" placeholder="" name="password" value="{{ old('password') }}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Minimo 8 caratteri" data-bs-custom-class="custom-tooltip">
+                <input type="password" class="custom-floating-input @error("password") is-invalid @enderror" id="floatingPassword" placeholder="" name="password" value="{{ old('password') }}" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="{{Str::ucfirst(__('ui.passwordRules'))}}" data-bs-custom-class="custom-tooltip">
                 <label class="custom-floating-label" for="floatingPassword">{{__("ui.password")}}</label>
                 <img class="pe-4 visibility" id="visibility" src="{{ url("asset/icons/visibility-on.svg") }}" alt="">
                 <x-validation field="password" />

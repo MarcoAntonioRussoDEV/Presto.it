@@ -179,6 +179,7 @@ button:focus .animate-vanish {
     }
 }
 
+
 @keyframes theme-animation-vanish {
     100% {
         rotate: 360deg;

@@ -77,7 +77,9 @@ return [
     'price' => 'prezzo',
     'stars' => 'stelle',
     'all' => 'tutti',
-    'filters' => 'filtri'
+    'filters' => 'filtri',
+    'passwordRules' => 'Minimo 8 caratteri'
+
 
 
 
