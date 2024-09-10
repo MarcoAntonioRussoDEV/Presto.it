@@ -92,12 +92,12 @@ class CreateArticleForm extends Component
     }
 
     public function messages(){
-        return ['temporary_images.*.dimensions' => "minimum dimensions 600x400 pixels"];
+        return ['temporary_images.*.dimensions' => "minimum dimensions 600x400 pixels",];
     }
     public function updatedTemporaryImages()
     {
         if ($this->validate([
-            'temporary_images.*' => 'image|max:4086|dimensions:min_width=600,min_height=400',
+            'temporary_images.*' => 'image|max:4000|dimensions:min_width=600,min_height=400',
             'temporary_images' => 'max:6',
             
 

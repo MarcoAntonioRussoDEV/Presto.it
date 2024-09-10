@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container">
+    <div class="container mb-5">
         <div class="row py-5 justify-content-center align-items-center text-center">
             <div class="col-12 pt-5">
                 <h1 class="display-2">{{__("ui.articles of the category")}}<span class="fst-italic fw-bold">

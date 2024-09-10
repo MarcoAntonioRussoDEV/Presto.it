@@ -1,4 +1,4 @@
-<div class="card p-0 custom-card-size">
+<div class="card p-0 custom-card-size shadow">
     <img class="custom-max-h-card rounded-top" src="{{$article->images->isNotEmpty() ? ($article->images->first()->getUrl(300,200)) : url("asset/img/placeholders/image-placeholder.webp")}}" 
     class="card-img-top" alt="immagine dell'articolo {{ $article->title}}">
     <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="badge bg-primary position-absolute top-0 end-0 m-2 text-decoration-none fw-semibold">#{{Str::ucfirst( __("ui.{$article->category->name}")) }}</a>
